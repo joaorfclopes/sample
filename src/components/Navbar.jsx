@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/svg/logo.svg";
+import { useMediaQuery } from "react-responsive";
 
 function scrollHome() {
   const view = document.getElementById("home");
@@ -33,32 +34,51 @@ function scrollContacts() {
 }
 
 export default function Navbar() {
+  const isDesktop = useMediaQuery({
+    query: "(min-device-width: 660px)"
+  });
+  const isMobile = useMediaQuery({
+    query: "(max-device-width: 660px)"
+  });
   return (
     <div className="navbar">
-      <div className="left">
-        <span onClick={scrollHome}>
-          <img className="logo" src={logo} alt="logo" />
-        </span>
-      </div>
-      <div className="right">
-        <ul className="links">
-          <li className="link">
-            <span id="homeButton" onClick={scrollHome}>
-              HOME
+      {isMobile && (
+        <>
+          <div className="left leftMobile">
+            <span onClick={scrollHome}>
+              <img className="logo logoMobile" src={logo} alt="logo" />
             </span>
-          </li>
-          <li className="link">
-            <span id="aboutButton" onClick={scrollAbout}>
-              ABOUT
+          </div>
+        </>
+      )}
+      {isDesktop && (
+        <>
+          <div className="left leftDesktop">
+            <span onClick={scrollHome}>
+              <img className="logo logoDesktop" src={logo} alt="logo" />
             </span>
-          </li>
-          <li className="link">
-            <span id="contactsButton" onClick={scrollContacts}>
-              CONTACTS
-            </span>
-          </li>
-        </ul>
-      </div>
+          </div>
+          <div className="right rightDesktop">
+            <ul className="links linksDesktop">
+              <li className="link linkDesktop">
+                <span id="homeButton" onClick={scrollHome}>
+                  HOME
+                </span>
+              </li>
+              <li className="link linkDesktop">
+                <span id="aboutButton" onClick={scrollAbout}>
+                  ABOUT
+                </span>
+              </li>
+              <li className="link linkDesktop">
+                <span id="contactsButton" onClick={scrollContacts}>
+                  CONTACTS
+                </span>
+              </li>
+            </ul>
+          </div>
+        </>
+      )}
     </div>
   );
 }
