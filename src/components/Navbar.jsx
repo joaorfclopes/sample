@@ -1,6 +1,16 @@
 import React from "react";
 import logo from "../assets/svg/logo.svg";
 
+function scrollHome() {
+  document.getElementById("home").scrollIntoView();
+}
+function scrollAbout() {
+  document.getElementById("about").scrollIntoView();
+}
+function scrollContacts() {
+  document.getElementById("contacts").scrollIntoView();
+}
+
 export default function Navbar() {
   return (
     <div className="navbar">
@@ -12,19 +22,13 @@ export default function Navbar() {
       <div className="right">
         <ul className="links">
           <li className="link">
-            <a href="#home" className="home">
-              HOME
-            </a>
+            <span onClick={scrollHome}>HOME</span>
           </li>
           <li className="link">
-            <a href="#about" className="about">
-              ABOUT
-            </a>
+            <span onClick={scrollAbout}>ABOUT</span>
           </li>
           <li className="link">
-            <a href="#contacts" className="contacts">
-              CONTACTS
-            </a>
+            <span onClick={scrollContacts}>CONTACTS</span>
           </li>
         </ul>
       </div>

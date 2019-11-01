@@ -11,6 +11,7 @@ body {
 .view {
   padding-top: 25vh;
   height: 200vh;
+  color: white;
 }
 .navbar {
   position: fixed;
@@ -38,10 +39,11 @@ body {
 .link {
   display: inline;
 }
-.link a {
+.link span {
   margin: 50px;
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 .link > * {
   margin: 0;
@@ -50,7 +52,7 @@ body {
   position: relative;
   outline: none;
 }
-.link > a:before {
+.link > span:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -63,8 +65,8 @@ body {
   transform: scaleX(0);
   transition: 0.25s linear;
 }
-.link > a:hover:before,
-.link > a:focus:before {
+.link > span:hover:before,
+.link > span:focus:before {
   visibility: visible;
   transform: scaleX(1);
 }
