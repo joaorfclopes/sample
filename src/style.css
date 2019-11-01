@@ -25,6 +25,7 @@ body {
 .logo {
   width: 10vh;
   margin: 5vh;
+  cursor: pointer;
 }
 .right {
   float: right;
@@ -69,4 +70,8 @@ body {
 .link > span:focus:before {
   visibility: visible;
   transform: scaleX(1);
+}
+.active {
+  background: red;
+  transition: 1s;
 }
