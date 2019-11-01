@@ -10,8 +10,6 @@ body {
 }
 .view {
   padding-top: 25vh;
-  height: 200vh;
-  color: white;
 }
 .navbar {
   position: fixed;
