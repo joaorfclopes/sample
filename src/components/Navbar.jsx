@@ -62,10 +62,10 @@ function scrollContactsDesktop() {
 
 export default function Navbar() {
   const isDesktop = useMediaQuery({
-    query: "(min-device-width: 660px)"
+    query: "(min-device-width: 840px)"
   });
   const isMobile = useMediaQuery({
-    query: "(max-device-width: 660px)"
+    query: "(max-device-width: 840px)"
   });
   return (
     <div className="navbar">
