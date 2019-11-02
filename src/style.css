@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Staatliches&display=swap");
 html {
   scroll-behavior: smooth;
+  background: #FCDDA4;
 }
 body {
   margin: 0;
