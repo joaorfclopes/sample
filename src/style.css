@@ -1,3 +1,4 @@
+/*GENERAL*/
 @import url("https://fonts.googleapis.com/css?family=Staatliches&display=swap");
 html {
   scroll-behavior: smooth;
@@ -10,6 +11,10 @@ body {
 }
 .view {
   padding-top: 25vh;
+  height: 100vh;
+  text-align: center;
+  font-family: "Staatliches", cursive;
+  color: white;
 }
 .navbar {
   position: fixed;
@@ -29,29 +34,34 @@ body {
   float: right;
 }
 .links {
-  font-family: "Staatliches", cursive;
-  font-size: 3vh;
   list-style-type: none;
+}
+.link {
+  font-family: "Staatliches", cursive;
+}
+/*DESKTOP*/
+.linksDesktop {
+  font-size: 3vh;
   padding: 0;
   margin-top: 8vh;
 }
-.link {
+.linkDesktop {
   display: inline;
 }
-.link span {
+.linkDesktop span {
   margin: 50px;
   text-decoration: none;
   color: white;
   cursor: pointer;
 }
-.link > * {
+.linkDesktop > * {
   margin: 0;
   padding: 0;
   border: 0 none;
   position: relative;
   outline: none;
 }
-.link > span:before {
+.linkDesktop > span:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -64,12 +74,59 @@ body {
   transform: scaleX(0);
   transition: 0.25s linear;
 }
-.link > span:hover:before,
-.link > span:focus:before {
+.linkDesktop > span:hover:before,
+.linkDesktop > span:focus:before {
   visibility: visible;
   transform: scaleX(1);
 }
 .active {
   background: red;
   transition: 1s;
+}
+/*MOBILE*/
+.structure {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.navbarMobile {
+  margin-right: 5vh;
+  margin-top: 8vh;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: whitesmoke;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: center;
+}
+.closebtn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #111;
+}
+.linksMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 80vh;
+}
+.linkMobile {
+  font-size: 10vw;
+  margin-top: 2vh;
+  margin-bottom: 4vh;
 }
