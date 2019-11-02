@@ -2,6 +2,45 @@ import React from "react";
 import logo from "../assets/svg/logo.svg";
 import { useMediaQuery } from "react-responsive";
 
+function isAtHome() {
+  if (window.scrollY <= 500) {
+    const homeButton = document.getElementById("homeButton");
+    const aboutButton = document.getElementById("aboutButton");
+    const contactsButton = document.getElementById("contactsButton");
+    homeButton.classList.add("active");
+    aboutButton.classList.remove("active");
+    contactsButton.classList.remove("active");
+  }
+}
+function isAtAbout() {
+  const home = document.getElementById("home");
+  if (window.scrollY > home.offsetTop + home.offsetHeight - 200) {
+    const homeButton = document.getElementById("homeButton");
+    const aboutButton = document.getElementById("aboutButton");
+    const contactsButton = document.getElementById("contactsButton");
+    homeButton.classList.remove("active");
+    aboutButton.classList.add("active");
+    contactsButton.classList.remove("active");
+  }
+}
+function isAtContacts() {
+  const about = document.getElementById("about");
+  if (window.scrollY > about.offsetTop + about.offsetHeight - 200) {
+    const homeButton = document.getElementById("homeButton");
+    const aboutButton = document.getElementById("aboutButton");
+    const contactsButton = document.getElementById("contactsButton");
+    homeButton.classList.remove("active");
+    aboutButton.classList.remove("active");
+    contactsButton.classList.add("active");
+  }
+}
+
+window.addEventListener("scroll", function() {
+  isAtHome();
+  isAtAbout();
+  isAtContacts();
+});
+
 function openNav() {
   document.getElementById("sidenav").style.width = "100%";
 }
@@ -117,7 +156,11 @@ export default function Navbar() {
           <div className="right rightDesktop">
             <ul className="links linksDesktop">
               <li className="link linkDesktop">
-                <span id="homeButton" onClick={scrollHomeDesktop}>
+                <span
+                  className="active"
+                  id="homeButton"
+                  onClick={scrollHomeDesktop}
+                >
                   HOME
                 </span>
               </li>

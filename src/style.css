@@ -82,7 +82,7 @@ body {
 }
 .active {
   background: red;
-  transition: 1s;
+  transition: 2s;
 }
 /*MOBILE*/
 .structure {
