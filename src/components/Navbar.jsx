@@ -3,7 +3,7 @@ import logo from "../assets/svg/logo.svg";
 import { useMediaQuery } from "react-responsive";
 
 function isAtHome() {
-  if (window.scrollY <= 500) {
+  if (window.scrollY < 500) {
     const homeButton = document.getElementById("homeButton");
     const aboutButton = document.getElementById("aboutButton");
     const contactsButton = document.getElementById("contactsButton");
@@ -13,8 +13,7 @@ function isAtHome() {
   }
 }
 function isAtAbout() {
-  const home = document.getElementById("home");
-  if (window.scrollY > home.offsetTop + home.offsetHeight - 200) {
+  if (window.scrollY >= 500 && window.scrollY < 1500) {
     const homeButton = document.getElementById("homeButton");
     const aboutButton = document.getElementById("aboutButton");
     const contactsButton = document.getElementById("contactsButton");
@@ -24,8 +23,7 @@ function isAtAbout() {
   }
 }
 function isAtContacts() {
-  const about = document.getElementById("about");
-  if (window.scrollY > about.offsetTop + about.offsetHeight - 200) {
+  if (window.scrollY >= 1500) {
     const homeButton = document.getElementById("homeButton");
     const aboutButton = document.getElementById("aboutButton");
     const contactsButton = document.getElementById("contactsButton");
@@ -124,7 +122,11 @@ export default function Navbar() {
             <div id="sidenav" className="sidenav">
               <ul className="links linksMobile">
                 <li className="link linkMobile">
-                  <span id="homeButton" onClick={scrollHomeMobile}>
+                  <span
+                    className="active"
+                    id="homeButton"
+                    onClick={scrollHomeMobile}
+                  >
                     HOME
                   </span>
                 </li>
