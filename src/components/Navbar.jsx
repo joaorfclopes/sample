@@ -2,7 +2,53 @@ import React from "react";
 import logo from "../assets/svg/logo.svg";
 import { useMediaQuery } from "react-responsive";
 
-function isAtHome() {
+function scrollHome() {
+  const homeButton = document.getElementById("homeButton");
+  const aboutButton = document.getElementById("aboutButton");
+  const contactsButton = document.getElementById("contactsButton");
+  homeButton.classList.add("active");
+  aboutButton.classList.remove("active");
+  contactsButton.classList.remove("active");
+
+  const view = document.getElementById("home");
+  view.scrollIntoView();
+
+  try {
+    closeNav();
+  } catch (error) {}
+}
+function scrollAbout() {
+  const homeButton = document.getElementById("homeButton");
+  const aboutButton = document.getElementById("aboutButton");
+  const contactsButton = document.getElementById("contactsButton");
+  homeButton.classList.remove("active");
+  aboutButton.classList.add("active");
+  contactsButton.classList.remove("active");
+
+  const view = document.getElementById("about");
+  view.scrollIntoView();
+
+  try {
+    closeNav();
+  } catch (error) {}
+}
+function scrollContacts() {
+  const homeButton = document.getElementById("homeButton");
+  const aboutButton = document.getElementById("aboutButton");
+  const contactsButton = document.getElementById("contactsButton");
+  homeButton.classList.remove("active");
+  aboutButton.classList.remove("active");
+  contactsButton.classList.add("active");
+
+  const view = document.getElementById("contacts");
+  view.scrollIntoView();
+
+  try {
+    closeNav();
+  } catch (error) {}
+}
+
+function isAtHomeMobile() {
   if (window.scrollY < 500) {
     const homeButton = document.getElementById("homeButton");
     const aboutButton = document.getElementById("aboutButton");
@@ -12,7 +58,38 @@ function isAtHome() {
     contactsButton.classList.remove("active");
   }
 }
-function isAtAbout() {
+function isAtAboutMobile() {
+  if (window.scrollY >= 500 && window.scrollY < 1000) {
+    const homeButton = document.getElementById("homeButton");
+    const aboutButton = document.getElementById("aboutButton");
+    const contactsButton = document.getElementById("contactsButton");
+    homeButton.classList.remove("active");
+    aboutButton.classList.add("active");
+    contactsButton.classList.remove("active");
+  }
+}
+function isAtContactsMobile() {
+  if (window.scrollY >= 1000) {
+    const homeButton = document.getElementById("homeButton");
+    const aboutButton = document.getElementById("aboutButton");
+    const contactsButton = document.getElementById("contactsButton");
+    homeButton.classList.remove("active");
+    aboutButton.classList.remove("active");
+    contactsButton.classList.add("active");
+  }
+}
+
+function isAtHomeDesktop() {
+  if (window.scrollY < 500) {
+    const homeButton = document.getElementById("homeButton");
+    const aboutButton = document.getElementById("aboutButton");
+    const contactsButton = document.getElementById("contactsButton");
+    homeButton.classList.add("active");
+    aboutButton.classList.remove("active");
+    contactsButton.classList.remove("active");
+  }
+}
+function isAtAboutDesktop() {
   if (window.scrollY >= 500 && window.scrollY < 1500) {
     const homeButton = document.getElementById("homeButton");
     const aboutButton = document.getElementById("aboutButton");
@@ -22,7 +99,7 @@ function isAtAbout() {
     contactsButton.classList.remove("active");
   }
 }
-function isAtContacts() {
+function isAtContactsDesktop() {
   if (window.scrollY >= 1500) {
     const homeButton = document.getElementById("homeButton");
     const aboutButton = document.getElementById("aboutButton");
@@ -33,83 +110,41 @@ function isAtContacts() {
   }
 }
 
-window.addEventListener("scroll", function() {
-  isAtHome();
-  isAtAbout();
-  isAtContacts();
-});
-
 function openNav() {
   document.getElementById("sidenav").style.width = "100%";
 }
-
 function closeNav() {
   document.getElementById("sidenav").style.width = "0";
 }
 
-function scrollHomeMobile() {
-  const view = document.getElementById("home");
-  view.scrollIntoView();
-  closeNav();
-}
-function scrollAboutMobile() {
-  const view = document.getElementById("about");
-  view.scrollIntoView();
-  closeNav();
-}
-function scrollContactsMobile() {
-  const view = document.getElementById("contacts");
-  view.scrollIntoView();
-  closeNav();
-}
-
-function scrollHomeDesktop() {
-  const homeButton = document.getElementById("homeButton");
-  const aboutButton = document.getElementById("aboutButton");
-  const contactsButton = document.getElementById("contactsButton");
-  homeButton.classList.add("active");
-  aboutButton.classList.remove("active");
-  contactsButton.classList.remove("active");
-
-  const view = document.getElementById("home");
-  view.scrollIntoView();
-}
-function scrollAboutDesktop() {
-  const homeButton = document.getElementById("homeButton");
-  const aboutButton = document.getElementById("aboutButton");
-  const contactsButton = document.getElementById("contactsButton");
-  homeButton.classList.remove("active");
-  aboutButton.classList.add("active");
-  contactsButton.classList.remove("active");
-
-  const view = document.getElementById("about");
-  view.scrollIntoView();
-}
-function scrollContactsDesktop() {
-  const homeButton = document.getElementById("homeButton");
-  const aboutButton = document.getElementById("aboutButton");
-  const contactsButton = document.getElementById("contactsButton");
-  homeButton.classList.remove("active");
-  aboutButton.classList.remove("active");
-  contactsButton.classList.add("active");
-
-  const view = document.getElementById("contacts");
-  view.scrollIntoView();
-}
-
 export default function Navbar() {
-  const isDesktop = useMediaQuery({
-    query: "(min-device-width: 840px)"
-  });
   const isMobile = useMediaQuery({
     query: "(max-device-width: 840px)"
   });
+  const isDesktop = useMediaQuery({
+    query: "(min-device-width: 840px)"
+  });
+
+  if (isMobile) {
+    window.addEventListener("scroll", function() {
+      isAtHomeMobile();
+      isAtAboutMobile();
+      isAtContactsMobile();
+    });
+  } else {
+    window.addEventListener("scroll", function() {
+      isAtHomeDesktop();
+      isAtAboutDesktop();
+      isAtContactsDesktop();
+    });
+  }
+
   return (
     <div className="navbar">
       {isMobile && (
         <>
           <div className="left leftMobile">
-            <span onClick={scrollHomeMobile}>
+            <span onClick={scrollHome}>
               <img className="logo logoMobile" src={logo} alt="logo" />
             </span>
           </div>
@@ -122,21 +157,17 @@ export default function Navbar() {
             <div id="sidenav" className="sidenav">
               <ul className="links linksMobile">
                 <li className="link linkMobile">
-                  <span
-                    className="active"
-                    id="homeButton"
-                    onClick={scrollHomeMobile}
-                  >
+                  <span className="active" id="homeButton" onClick={scrollHome}>
                     HOME
                   </span>
                 </li>
                 <li className="link linkMobile">
-                  <span id="aboutButton" onClick={scrollAboutMobile}>
+                  <span id="aboutButton" onClick={scrollAbout}>
                     ABOUT
                   </span>
                 </li>
                 <li className="link linkMobile">
-                  <span id="contactsButton" onClick={scrollContactsMobile}>
+                  <span id="contactsButton" onClick={scrollContacts}>
                     CONTACTS
                   </span>
                 </li>
@@ -151,28 +182,24 @@ export default function Navbar() {
       {isDesktop && (
         <>
           <div className="left leftDesktop">
-            <span onClick={scrollHomeDesktop}>
+            <span onClick={scrollHome}>
               <img className="logo logoDesktop" src={logo} alt="logo" />
             </span>
           </div>
           <div className="right rightDesktop">
             <ul className="links linksDesktop">
               <li className="link linkDesktop">
-                <span
-                  className="active"
-                  id="homeButton"
-                  onClick={scrollHomeDesktop}
-                >
+                <span className="active" id="homeButton" onClick={scrollHome}>
                   HOME
                 </span>
               </li>
               <li className="link linkDesktop">
-                <span id="aboutButton" onClick={scrollAboutDesktop}>
+                <span id="aboutButton" onClick={scrollAbout}>
                   ABOUT
                 </span>
               </li>
               <li className="link linkDesktop">
-                <span id="contactsButton" onClick={scrollContactsDesktop}>
+                <span id="contactsButton" onClick={scrollContacts}>
                   CONTACTS
                 </span>
               </li>
