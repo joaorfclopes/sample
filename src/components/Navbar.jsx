@@ -119,10 +119,10 @@ function closeNav() {
 
 export default function Navbar() {
   const isMobile = useMediaQuery({
-    query: "(max-device-width: 840px)"
+    query: "(max-device-width: 1190px)"
   });
   const isDesktop = useMediaQuery({
-    query: "(min-device-width: 840px)"
+    query: "(min-device-width: 1190px)"
   });
 
   if (isMobile) {

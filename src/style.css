@@ -28,7 +28,7 @@ body {
   float: left;
 }
 .logo {
-  width: 20vh;
+  width: 25vh;
   margin: 5vh;
   cursor: pointer;
 }
@@ -96,7 +96,7 @@ body {
 }
 .navbarMobile {
   margin-right: 5vh;
-  margin-top: 7vh;
+  margin-top: 7.5vh;
 }
 .sidenav {
   height: 100%;
