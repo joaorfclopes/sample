@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Staatliches&display=swap");
 html {
   scroll-behavior: smooth;
-  background: #FCDDA4;
+  background: #fcdda4;
 }
 body {
   margin: 0;
@@ -12,11 +12,10 @@ body {
   background-position: center;
 }
 .view {
-  padding-top: 25vh;
-  height: 100vh;
   text-align: center;
   font-family: "Staatliches", cursive;
   color: white;
+  padding-bottom: 1vh;
 }
 .navbar {
   position: fixed;
@@ -29,7 +28,7 @@ body {
   float: left;
 }
 .logo {
-  width: 25vh;
+  width: 22vh;
   margin: 5vh;
   cursor: pointer;
 }
@@ -42,11 +41,39 @@ body {
 .link {
   font-family: "Staatliches", cursive;
 }
+/*HOME*/
+.Home {
+  padding-top: 20vh;
+}
+.homeImages {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  background: transparent;
+}
+.homeImage {
+  border: none;
+  border-radius: 0;
+  margin: 1vw;
+  padding: 0;
+}
+.imageContainer {
+  border: none;
+  padding: 0;
+  height: 35vh;
+}
+.image {
+  width: 100%;
+  height: 100%;
+}
+/*ABOUT*/
+.About {
+  padding-top: 10vh;
+}
 /*DESKTOP*/
 .linksDesktop {
   font-size: 3vh;
   padding: 0;
-  margin-top: 7vh;
+  margin-top: 2vh;
 }
 .linkDesktop {
   display: inline;
@@ -97,7 +124,7 @@ body {
 }
 .navbarMobile {
   margin-right: 5vh;
-  margin-top: 7.5vh;
+  margin-top: 1vh;
 }
 .sidenav {
   height: 100%;
