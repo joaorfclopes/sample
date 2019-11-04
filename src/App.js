@@ -1,12 +1,18 @@
-import React from "react";
+import React, { Component } from "react";
 import Main from "./views/Main";
 
-function App() {
-  return (
-    <div className="App">
-      <Main />
-    </div>
-  );
+class App extends Component {
+  componentDidMount() {
+    console.log("DONE");
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Main />
+      </div>
+    );
+  }
 }
 
 export default App;

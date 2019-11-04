@@ -75,6 +75,11 @@ body {
 /*ABOUT*/
 .About {
   padding-top: 5vh;
+  height: 100vh;
+}
+/*CONTACTS*/
+.Contacts {
+  height: 100vh;
 }
 /*DESKTOP*/
 .linksDesktop {
