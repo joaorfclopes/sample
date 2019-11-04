@@ -17,7 +17,6 @@ export default function Home() {
         <Card className="homeImage">
           <Card.Body className="imageContainer">
             <ProgressiveImage
-              delay={500}
               src={image1}
               placeholder={image1Smalll}
             >
@@ -28,7 +27,6 @@ export default function Home() {
         <Card className="homeImage">
           <Card.Body className="imageContainer">
             <ProgressiveImage
-              delay={500}
               src={image2}
               placeholder={image2Smalll}
             >
@@ -41,7 +39,6 @@ export default function Home() {
         <Card className="homeImage">
           <Card.Body className="imageContainer">
             <ProgressiveImage
-              delay={500}
               src={image3}
               placeholder={image3Smalll}
             >
@@ -52,7 +49,6 @@ export default function Home() {
         <Card className="homeImage">
           <Card.Body className="imageContainer">
             <ProgressiveImage
-              delay={500}
               src={image4}
               placeholder={image4Smalll}
             >
