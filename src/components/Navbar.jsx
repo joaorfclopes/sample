@@ -2,7 +2,17 @@ import React from "react";
 import logo from "../assets/svg/logo.svg";
 import { useMediaQuery } from "react-responsive";
 
+let wasClicked = false;
+
+function doneClicking() {
+  setTimeout(() => {
+    wasClicked = false;
+  }, 1000);
+}
+
 function scrollHome() {
+  wasClicked = true;
+
   const homeButton = document.getElementById("homeButton");
   const aboutButton = document.getElementById("aboutButton");
   const contactsButton = document.getElementById("contactsButton");
@@ -16,8 +26,12 @@ function scrollHome() {
   try {
     closeNav();
   } catch (error) {}
+
+  doneClicking();
 }
 function scrollAbout() {
+  wasClicked = true;
+
   const homeButton = document.getElementById("homeButton");
   const aboutButton = document.getElementById("aboutButton");
   const contactsButton = document.getElementById("contactsButton");
@@ -31,8 +45,12 @@ function scrollAbout() {
   try {
     closeNav();
   } catch (error) {}
+
+  doneClicking();
 }
 function scrollContacts() {
+  wasClicked = true;
+
   const homeButton = document.getElementById("homeButton");
   const aboutButton = document.getElementById("aboutButton");
   const contactsButton = document.getElementById("contactsButton");
@@ -46,10 +64,11 @@ function scrollContacts() {
   try {
     closeNav();
   } catch (error) {}
-}
 
+  doneClicking();
+}
 function isAtHomeMobile() {
-  if (window.scrollY < 500) {
+  if (wasClicked === false && window.scrollY < 450) {
     const homeButton = document.getElementById("homeButton");
     const aboutButton = document.getElementById("aboutButton");
     const contactsButton = document.getElementById("contactsButton");
@@ -59,7 +78,7 @@ function isAtHomeMobile() {
   }
 }
 function isAtAboutMobile() {
-  if (window.scrollY >= 500 && window.scrollY < 1000) {
+  if (wasClicked === false && window.scrollY >= 450 && window.scrollY < 1450) {
     const homeButton = document.getElementById("homeButton");
     const aboutButton = document.getElementById("aboutButton");
     const contactsButton = document.getElementById("contactsButton");
@@ -69,7 +88,7 @@ function isAtAboutMobile() {
   }
 }
 function isAtContactsMobile() {
-  if (window.scrollY >= 1000) {
+  if (wasClicked === false && window.scrollY >= 1450) {
     const homeButton = document.getElementById("homeButton");
     const aboutButton = document.getElementById("aboutButton");
     const contactsButton = document.getElementById("contactsButton");
@@ -80,7 +99,7 @@ function isAtContactsMobile() {
 }
 
 function isAtHomeDesktop() {
-  if (window.scrollY < 500) {
+  if (wasClicked === false && window.scrollY < 500) {
     const homeButton = document.getElementById("homeButton");
     const aboutButton = document.getElementById("aboutButton");
     const contactsButton = document.getElementById("contactsButton");
@@ -90,7 +109,7 @@ function isAtHomeDesktop() {
   }
 }
 function isAtAboutDesktop() {
-  if (window.scrollY >= 500 && window.scrollY < 1500) {
+  if (wasClicked === false && window.scrollY >= 500 && window.scrollY < 1500) {
     const homeButton = document.getElementById("homeButton");
     const aboutButton = document.getElementById("aboutButton");
     const contactsButton = document.getElementById("contactsButton");
@@ -100,7 +119,7 @@ function isAtAboutDesktop() {
   }
 }
 function isAtContactsDesktop() {
-  if (window.scrollY >= 1500) {
+  if (wasClicked === false && window.scrollY >= 1500) {
     const homeButton = document.getElementById("homeButton");
     const aboutButton = document.getElementById("aboutButton");
     const contactsButton = document.getElementById("contactsButton");
