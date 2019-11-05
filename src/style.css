@@ -1,4 +1,19 @@
 /*GENERAL*/
+.loader {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background: white;
+  text-align: center;
+}
+.loader--hide {
+  opacity: 0;
+  z-index: -1;
+}
+.loaderIcon {
+  margin-top: 30vh;
+}
 @import url("https://fonts.googleapis.com/css?family=Staatliches&display=swap");
 html {
   scroll-behavior: smooth;

@@ -9,4 +9,14 @@ $(document).ready(function() {
   $(this).scrollTop(0);
 });
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const loader = document.querySelector(".loader");
+
+const showLoader = () => loader.classList.remove("loader--hide");
+const hideLoader = () => loader.classList.add("loader--hide");
+
+setTimeout(() => {
+  ReactDOM.render(
+    <App hideLoader={hideLoader} showLoader={showLoader} />,
+    document.getElementById("root")
+  );
+}, 1000);

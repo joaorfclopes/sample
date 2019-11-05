@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Main from "./views/Main";
-
 class App extends Component {
+  
   componentDidMount() {
-    console.log("DONE");
+    this.props.hideLoader();
   }
 
   render() {
