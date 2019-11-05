@@ -6,7 +6,7 @@ import Contacts from "./Contacts";
 
 export default function Main() {
   return (
-    <div className="Main">
+    <div className="main">
       <Navbar />
       <Home />
       <About />

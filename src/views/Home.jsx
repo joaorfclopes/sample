@@ -12,7 +12,7 @@ import image4 from "../assets/images/image4.jpg";
 
 export default function Home() {
   return (
-    <div className="Home view" id="home">
+    <div className="home view">
       <CardGroup className="homeImages">
         <Card className="homeImage">
           <Card.Body className="imageCard">

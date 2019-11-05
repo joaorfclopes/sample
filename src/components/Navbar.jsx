@@ -20,7 +20,7 @@ function scrollHome() {
   aboutButton.classList.remove("active");
   contactsButton.classList.remove("active");
 
-  const view = document.getElementById("home");
+  const view = document.querySelector(".home");
   view.scrollIntoView();
 
   try {
@@ -39,7 +39,7 @@ function scrollAbout() {
   aboutButton.classList.add("active");
   contactsButton.classList.remove("active");
 
-  const view = document.getElementById("about");
+  const view = document.querySelector(".about");
   view.scrollIntoView();
 
   try {
@@ -58,7 +58,7 @@ function scrollContacts() {
   aboutButton.classList.remove("active");
   contactsButton.classList.add("active");
 
-  const view = document.getElementById("contacts");
+  const view = document.querySelector(".contacts");
   view.scrollIntoView();
 
   try {
@@ -168,7 +168,7 @@ export default function Navbar() {
             </span>
           </div>
           <div className="right rightMobile">
-            <div className="navbarMobile" id="navbarMobileID" onClick={openNav}>
+            <div className="navbarMobile" onClick={openNav}>
               <div className="structure bar1"></div>
               <div className="structure bar2"></div>
               <div className="structure bar3"></div>

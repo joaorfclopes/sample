@@ -61,7 +61,7 @@ body {
   font-family: "Staatliches", cursive;
 }
 /*HOME*/
-.Home {
+.home {
   padding-top: 17vh;
 }
 .homeImages {
@@ -111,12 +111,12 @@ body {
   transition: 1s !important;
 }
 /*ABOUT*/
-.About {
+.about {
   padding-top: 5vh;
   height: 100vh;
 }
 /*CONTACTS*/
-.Contacts {
+.contacts {
   height: 100vh;
 }
 /*DESKTOP*/
