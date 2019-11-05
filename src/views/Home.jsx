@@ -15,44 +15,64 @@ export default function Home() {
     <div className="Home view" id="home">
       <CardGroup className="homeImages">
         <Card className="homeImage">
-          <Card.Body className="imageContainer">
-            <ProgressiveImage
-              src={image1}
-              placeholder={image1Smalll}
-            >
-              {src => <img className="image" src={src} alt="image1" />}
+          <Card.Body className="imageCard">
+            <ProgressiveImage src={image1} placeholder={image1Smalll}>
+              {src => (
+                <div className="imageContainer">
+                  <div className="imageText">
+                    <h5>Lorem ipsum</h5>
+                    <p>Dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                  <img className="image" src={src} alt="image1" />
+                </div>
+              )}
             </ProgressiveImage>
           </Card.Body>
         </Card>
         <Card className="homeImage">
-          <Card.Body className="imageContainer">
-            <ProgressiveImage
-              src={image2}
-              placeholder={image2Smalll}
-            >
-              {src => <img className="image" src={src} alt="image1" />}
+          <Card.Body className="imageCard">
+            <ProgressiveImage src={image2} placeholder={image2Smalll}>
+              {src => (
+                <div className="imageContainer">
+                  <div className="imageText">
+                    <h5>Lorem ipsum</h5>
+                    <p>Dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                  <img className="image" src={src} alt="image1" />
+                </div>
+              )}
             </ProgressiveImage>
           </Card.Body>
         </Card>
       </CardGroup>
       <CardGroup className="homeImages">
         <Card className="homeImage">
-          <Card.Body className="imageContainer">
-            <ProgressiveImage
-              src={image3}
-              placeholder={image3Smalll}
-            >
-              {src => <img className="image" src={src} alt="image1" />}
+          <Card.Body className="imageCard">
+            <ProgressiveImage src={image3} placeholder={image3Smalll}>
+              {src => (
+                <div className="imageContainer">
+                  <div className="imageText">
+                    <h5>Lorem ipsum</h5>
+                    <p>Dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                  <img className="image" src={src} alt="image1" />
+                </div>
+              )}
             </ProgressiveImage>
           </Card.Body>
         </Card>
         <Card className="homeImage">
-          <Card.Body className="imageContainer">
-            <ProgressiveImage
-              src={image4}
-              placeholder={image4Smalll}
-            >
-              {src => <img className="image" src={src} alt="image1" />}
+          <Card.Body className="imageCard">
+            <ProgressiveImage src={image4} placeholder={image4Smalll}>
+              {src => (
+                <div className="imageContainer">
+                  <div className="imageText">
+                    <h5>Lorem ipsum</h5>
+                    <p>Dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                  <img className="image" src={src} alt="image1" />
+                </div>
+              )}
             </ProgressiveImage>
           </Card.Body>
         </Card>
