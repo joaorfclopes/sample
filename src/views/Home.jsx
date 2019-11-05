@@ -16,7 +16,12 @@ export default function Home() {
       <CardGroup className="homeImages">
         <Card className="homeImage">
           <Card.Body className="imageCard">
-            <ProgressiveImage src={image1} placeholder={image1Smalll}>
+            <ProgressiveImage
+              className="progressiveImage"
+              src={image1}
+              placeholder={image1Smalll}
+              delay={1000}
+            >
               {src => (
                 <div className="imageContainer">
                   <div className="imageText">
@@ -31,14 +36,18 @@ export default function Home() {
         </Card>
         <Card className="homeImage">
           <Card.Body className="imageCard">
-            <ProgressiveImage src={image2} placeholder={image2Smalll}>
+            <ProgressiveImage
+              src={image2}
+              placeholder={image2Smalll}
+              delay={1000}
+            >
               {src => (
                 <div className="imageContainer">
                   <div className="imageText">
                     <h5>Lorem ipsum</h5>
                     <p>Dolor sit amet, consectetur adipiscing elit.</p>
                   </div>
-                  <img className="image" src={src} alt="image1" />
+                  <img className="image" src={src} alt="image2" />
                 </div>
               )}
             </ProgressiveImage>
@@ -48,14 +57,18 @@ export default function Home() {
       <CardGroup className="homeImages">
         <Card className="homeImage">
           <Card.Body className="imageCard">
-            <ProgressiveImage src={image3} placeholder={image3Smalll}>
+            <ProgressiveImage
+              src={image3}
+              placeholder={image3Smalll}
+              delay={1000}
+            >
               {src => (
                 <div className="imageContainer">
                   <div className="imageText">
                     <h5>Lorem ipsum</h5>
                     <p>Dolor sit amet, consectetur adipiscing elit.</p>
                   </div>
-                  <img className="image" src={src} alt="image1" />
+                  <img className="image" src={src} alt="image3" />
                 </div>
               )}
             </ProgressiveImage>
@@ -63,14 +76,18 @@ export default function Home() {
         </Card>
         <Card className="homeImage">
           <Card.Body className="imageCard">
-            <ProgressiveImage src={image4} placeholder={image4Smalll}>
+            <ProgressiveImage
+              src={image4}
+              placeholder={image4Smalll}
+              delay={1000}
+            >
               {src => (
                 <div className="imageContainer">
                   <div className="imageText">
                     <h5>Lorem ipsum</h5>
                     <p>Dolor sit amet, consectetur adipiscing elit.</p>
                   </div>
-                  <img className="image" src={src} alt="image1" />
+                  <img className="image" src={src} alt="image4" />
                 </div>
               )}
             </ProgressiveImage>
