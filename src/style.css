@@ -1,13 +1,14 @@
-/*GENERAL*/
+/*----------------GENERAL----------------*/
+
 @font-face {
   font-family: "Staatliches";
   src: url("./fonts/Staatliches-Regular.ttf");
 }
 html {
-  scroll-behavior: smooth;
   background: #fcdda4;
   -ms-overflow-style: none;
   scrollbar-width: none !important;
+  scroll-behavior: smooth;
 }
 html::-webkit-scrollbar {
   width: 0 !important;
@@ -49,7 +50,7 @@ body {
   width: 100%;
   top: 0;
   height: 20vh;
-  z-index: 999;
+  z-index: 999 !important;
 }
 .left {
   float: left;
@@ -70,64 +71,89 @@ body {
 }
 /*HOME*/
 .home {
-  padding-top: 17vh;
-}
-.homeImages {
-  margin-left: 15vw;
-  margin-right: 15vw;
-  background: transparent;
+  padding-top: 20vh;
 }
 .homeImage {
   border: none;
-  border-radius: 0;
-  margin: 1vw;
-  padding: 0;
-  background: black;
+  background: transparent;
 }
 .imageCard {
-  border: none;
   padding: 0;
-  height: 35vh;
   overflow: hidden;
-  height: 100%;
-  cursor: pointer;
-}
-.image {
-  width: 100%;
-  height: 38vh;
-  transition: 0.4s;
-}
-.imageText {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  bottom: 1%;
-  z-index: 1;
-  opacity: 0;
-  transition: 0.4s;
-}
-.imageContainer:hover .image {
-  transition: 0.4s;
-  transform: scale(1.2);
-  opacity: 0.3;
-}
-.imageContainer:hover .imageText {
-  transition: 0.4s;
-  opacity: 1;
 }
 .progressiveImage::after {
   transition: 1s !important;
 }
 /*ABOUT*/
 .about {
-  padding-top: 5vh;
+  padding-top: 20vh;
   height: 100vh;
 }
 /*CONTACTS*/
 .contacts {
   height: 100vh;
 }
-/*DESKTOP*/
+
+/*----------------MOBILE----------------*/
+
+/*NAV*/
+.structure {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.navbarMobile {
+  margin-right: 5vh;
+  margin-top: 1vh;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: whitesmoke;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: center;
+}
+.closebtn {
+  position: absolute;
+  font-size: 50px;
+  top: 5%;
+  right: 15%;
+  color: #111;
+}
+.linksMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 80vh;
+}
+.linkMobile {
+  font-size: 10vw;
+  margin-top: 2vh;
+  margin-bottom: 4vh;
+}
+/*HOME*/
+.imageMobile {
+  width: 100%;
+}
+.homeImageMobile {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 20px;
+}
+
+/*----------------DESKTOP----------------*/
+
 /*NAV*/
 .linksDesktop {
   font-size: 3vh;
@@ -172,51 +198,40 @@ body {
   background: red;
   transition: 2s;
 }
-/*MOBILE*/
-/*NAV*/
-.structure {
-  width: 35px;
-  height: 5px;
-  background-color: white;
-  margin: 6px 0;
-  transition: 0.4s;
-  cursor: pointer;
+/*HOME*/
+.imageContainerDesktop {
+  height: 50vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 100px;
 }
-.navbarMobile {
-  margin-right: 5vh;
-  margin-top: 1vh;
-}
-.sidenav {
+.homeLeftImage {
+  float: left;
   height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: whitesmoke;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-  text-align: center;
+  width: 50%;
+  overflow: hidden;
 }
-.closebtn {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  font-size: 36px;
-  margin-left: 50px;
-  color: #111;
+.homeRightDesc {
+  float: right;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  text-align: left;
+  padding-left: 5%;
+  padding-top: 10%;
 }
-.linksMobile {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 80vh;
+.homeLeftDesc {
+  float: left;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  text-align: right;
+  padding-right: 5%;
+  padding-top: 10%;
 }
-.linkMobile {
-  font-size: 10vw;
-  margin-top: 2vh;
-  margin-bottom: 4vh;
+.homeRightImage {
+  float: right;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
 }

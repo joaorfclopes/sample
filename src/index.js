@@ -3,11 +3,6 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
-import $ from "jquery";
-
-$(document).ready(function() {
-  $(this).scrollTop(0);
-});
 
 const loader = document.querySelector(".loader");
 
@@ -19,4 +14,4 @@ setTimeout(() => {
     <App hideLoader={hideLoader} showLoader={showLoader} />,
     document.getElementById("root")
   );
-}, 1000);
+}, 1500);
