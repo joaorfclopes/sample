@@ -8,7 +8,6 @@ html {
   background: #fde086;
   -ms-overflow-style: none;
   scrollbar-width: none !important;
-  scroll-behavior: smooth;
 }
 html::-webkit-scrollbar {
   width: 0 !important;
@@ -222,7 +221,7 @@ button.active.focus {
 }
 .active {
   background: red;
-  transition: 2s;
+  transition: 1s;
 }
 /*HOME*/
 .imageContainerDesktop {

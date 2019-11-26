@@ -2,139 +2,89 @@ import React from "react";
 import logo from "../assets/svg/logo.svg";
 import { useMediaQuery } from "react-responsive";
 import Fade from "react-reveal/Fade";
-
-let wasClicked = false;
-
-function doneClicking() {
-  setTimeout(() => {
-    wasClicked = false;
-  }, 1500);
-}
-
-function scrollHome() {
-  wasClicked = true;
-
-  const homeButton = document.getElementById("homeButton");
-  const aboutButton = document.getElementById("aboutButton");
-  const contactsButton = document.getElementById("contactsButton");
-  homeButton.classList.add("active");
-  aboutButton.classList.remove("active");
-  contactsButton.classList.remove("active");
-
-  const view = document.querySelector(".home");
-  view.scrollIntoView();
-
-  try {
-    closeNav();
-  } catch (error) {}
-
-  doneClicking();
-}
-function scrollAbout() {
-  wasClicked = true;
-
-  const homeButton = document.getElementById("homeButton");
-  const aboutButton = document.getElementById("aboutButton");
-  const contactsButton = document.getElementById("contactsButton");
-  homeButton.classList.remove("active");
-  aboutButton.classList.add("active");
-  contactsButton.classList.remove("active");
-
-  const view = document.querySelector(".about");
-  view.scrollIntoView();
-
-  try {
-    closeNav();
-  } catch (error) {}
-
-  doneClicking();
-}
-function scrollContacts() {
-  wasClicked = true;
-
-  const homeButton = document.getElementById("homeButton");
-  const aboutButton = document.getElementById("aboutButton");
-  const contactsButton = document.getElementById("contactsButton");
-  homeButton.classList.remove("active");
-  aboutButton.classList.remove("active");
-  contactsButton.classList.add("active");
-
-  const view = document.querySelector(".contacts");
-  view.scrollIntoView();
-
-  try {
-    closeNav();
-  } catch (error) {}
-
-  doneClicking();
-}
-function isAtHomeMobile() {
-  if (wasClicked === false && window.scrollY < 450) {
-    const homeButton = document.getElementById("homeButton");
-    const aboutButton = document.getElementById("aboutButton");
-    const contactsButton = document.getElementById("contactsButton");
-    homeButton.classList.add("active");
-    aboutButton.classList.remove("active");
-    contactsButton.classList.remove("active");
-  }
-}
-function isAtAboutMobile() {
-  if (wasClicked === false && window.scrollY >= 450 && window.scrollY < 1450) {
-    const homeButton = document.getElementById("homeButton");
-    const aboutButton = document.getElementById("aboutButton");
-    const contactsButton = document.getElementById("contactsButton");
-    homeButton.classList.remove("active");
-    aboutButton.classList.add("active");
-    contactsButton.classList.remove("active");
-  }
-}
-function isAtContactsMobile() {
-  if (wasClicked === false && window.scrollY >= 1450) {
-    const homeButton = document.getElementById("homeButton");
-    const aboutButton = document.getElementById("aboutButton");
-    const contactsButton = document.getElementById("contactsButton");
-    homeButton.classList.remove("active");
-    aboutButton.classList.remove("active");
-    contactsButton.classList.add("active");
-  }
-}
-
-function isAtHomeDesktop() {
-  if (wasClicked === false && window.scrollY < 500) {
-    const homeButton = document.getElementById("homeButton");
-    const aboutButton = document.getElementById("aboutButton");
-    const contactsButton = document.getElementById("contactsButton");
-    homeButton.classList.add("active");
-    aboutButton.classList.remove("active");
-    contactsButton.classList.remove("active");
-  }
-}
-function isAtAboutDesktop() {
-  if (wasClicked === false && window.scrollY >= 500 && window.scrollY < 1500) {
-    const homeButton = document.getElementById("homeButton");
-    const aboutButton = document.getElementById("aboutButton");
-    const contactsButton = document.getElementById("contactsButton");
-    homeButton.classList.remove("active");
-    aboutButton.classList.add("active");
-    contactsButton.classList.remove("active");
-  }
-}
-function isAtContactsDesktop() {
-  if (wasClicked === false && window.scrollY >= 1500) {
-    const homeButton = document.getElementById("homeButton");
-    const aboutButton = document.getElementById("aboutButton");
-    const contactsButton = document.getElementById("contactsButton");
-    homeButton.classList.remove("active");
-    aboutButton.classList.remove("active");
-    contactsButton.classList.add("active");
-  }
-}
+import $ from "jquery";
 
 function openNav() {
   document.getElementById("sidenav").style.width = "100%";
 }
 function closeNav() {
   document.getElementById("sidenav").style.width = "0";
+}
+
+function activeHome() {
+  $("#homeButton").addClass("active");
+  $("#aboutButton").removeClass("active");
+  $("#contactsButton").removeClass("active");
+}
+function activeAbout() {
+  $("#homeButton").removeClass("active");
+  $("#aboutButton").addClass("active");
+  $("#contactsButton").removeClass("active");
+}
+function activeContacts() {
+  $("#homeButton").removeClass("active");
+  $("#aboutButton").removeClass("active");
+  $("#contactsButton").addClass("active");
+}
+
+$(window).scroll(function() {
+  const distanceHome = $(".home").offset().top;
+  const distanceAbout = $(".about").offset().top;
+  const distanceContacts = $(".contacts").offset().top;
+  if (
+    $(window).scrollTop() >= distanceHome - 300 &&
+    $(window).scrollTop() <= distanceAbout - 300 &&
+    $(window).scrollTop() <= distanceContacts - 300
+  ) {
+    activeHome();
+  } else if (
+    $(window).scrollTop() >= distanceHome - 300 &&
+    $(window).scrollTop() >= distanceAbout - 300 &&
+    $(window).scrollTop() <= distanceContacts - 300
+  ) {
+    activeAbout();
+  } else if (
+    $(window).scrollTop() >= distanceHome - 300 &&
+    $(window).scrollTop() >= distanceAbout - 300 &&
+    $(window).scrollTop() >= distanceContacts - 300
+  ) {
+    activeContacts();
+  }
+});
+
+function scrollHome() {
+  $("html, body").animate(
+    {
+      scrollTop: $(".home").offset().top
+    },
+    1000
+  );
+  try {
+    closeNav();
+  } catch (error) {}
+}
+function scrollAbout() {
+  $("html, body").animate(
+    {
+      scrollTop: $(".about").offset().top
+    },
+    1000
+  );
+  try {
+    closeNav();
+  } catch (error) {}
+}
+function scrollContacts() {
+  $("html, body").animate(
+    {
+      scrollTop: $(".contacts").offset().top
+    },
+    1000
+  );
+
+  try {
+    closeNav();
+  } catch (error) {}
 }
 
 export default function Navbar() {
@@ -145,27 +95,13 @@ export default function Navbar() {
     query: "(min-device-width: 1190px)"
   });
 
-  if (isMobile) {
-    window.addEventListener("scroll", function() {
-      isAtHomeMobile();
-      isAtAboutMobile();
-      isAtContactsMobile();
-    });
-  } else {
-    window.addEventListener("scroll", function() {
-      isAtHomeDesktop();
-      isAtAboutDesktop();
-      isAtContactsDesktop();
-    });
-  }
-
   return (
     <Fade top>
       <div className="navbar">
         {isMobile && (
           <>
             <div className="left leftMobile">
-              <span onClick={scrollHome}>
+              <span>
                 <img className="logo logoMobile" src={logo} alt="logo" />
               </span>
             </div>
@@ -207,7 +143,7 @@ export default function Navbar() {
         {isDesktop && (
           <>
             <div className="left leftDesktop">
-              <span onClick={scrollHome}>
+              <span>
                 <img className="logo logoDesktop" src={logo} alt="logo" />
               </span>
             </div>
