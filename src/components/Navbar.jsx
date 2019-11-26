@@ -28,6 +28,11 @@ function activeContacts() {
 }
 
 $(window).scroll(function() {
+  if ($(window).scrollTop() >= 100) {
+    $(".nav").css("background-color", "#111");
+  } else {
+    $(".nav").css("background-color", "transparent");
+  }
   const distanceHome = $(".home").offset().top;
   const distanceAbout = $(".about").offset().top;
   const distanceContacts = $(".contacts").offset().top;
@@ -57,7 +62,7 @@ function scrollHome() {
     {
       scrollTop: $(".home").offset().top
     },
-    1000
+    800
   );
   try {
     closeNav();
@@ -68,7 +73,7 @@ function scrollAbout() {
     {
       scrollTop: $(".about").offset().top
     },
-    1000
+    800
   );
   try {
     closeNav();
@@ -79,7 +84,7 @@ function scrollContacts() {
     {
       scrollTop: $(".contacts").offset().top
     },
-    1000
+    800
   );
 
   try {
@@ -97,23 +102,63 @@ export default function Navbar() {
 
   return (
     <Fade top>
-      <div className="navbar">
+      <div className="nav">
         {isMobile && (
           <>
-            <div className="left leftMobile">
-              <span onClick={scrollHome}>
-                <img className="logo logoMobile" src={logo} alt="logo" />
-              </span>
-            </div>
-            <div className="right rightMobile">
-              <div className="navbarMobile" onClick={openNav}>
-                <div className="structure bar1"></div>
-                <div className="structure bar2"></div>
-                <div className="structure bar3"></div>
+            <div className="navbar navMobile">
+              <div className="left leftMobile">
+                <span onClick={scrollHome}>
+                  <img className="logo logoMobile" src={logo} alt="logo" />
+                </span>
               </div>
-              <div id="sidenav" className="sidenav">
-                <ul className="links linksMobile">
-                  <li className="link linkMobile">
+              <div className="right rightMobile">
+                <div className="navbarMobile" onClick={openNav}>
+                  <div className="structure bar1"></div>
+                  <div className="structure bar2"></div>
+                  <div className="structure bar3"></div>
+                </div>
+                <div id="sidenav" className="sidenav">
+                  <ul className="links linksMobile">
+                    <li className="link linkMobile">
+                      <span
+                        className="active"
+                        id="homeButton"
+                        onClick={scrollHome}
+                      >
+                        HOME
+                      </span>
+                    </li>
+                    <li className="link linkMobile">
+                      <span id="aboutButton" onClick={scrollAbout}>
+                        ABOUT
+                      </span>
+                    </li>
+                    <li className="link linkMobile">
+                      <span id="contactsButton" onClick={scrollContacts}>
+                        CONTACTS
+                      </span>
+                    </li>
+                  </ul>
+                  <span className="closebtn" onClick={closeNav}>
+                    &times;
+                  </span>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+
+        {isDesktop && (
+          <>
+            <div className="navbar navDesktop">
+              <div className="left leftDesktop">
+                <span onClick={scrollHome}>
+                  <img className="logo logoDesktop" src={logo} alt="logo" />
+                </span>
+              </div>
+              <div className="right rightDesktop">
+                <ul className="links linksDesktop">
+                  <li className="link linkDesktop">
                     <span
                       className="active"
                       id="homeButton"
@@ -122,49 +167,18 @@ export default function Navbar() {
                       HOME
                     </span>
                   </li>
-                  <li className="link linkMobile">
+                  <li className="link linkDesktop">
                     <span id="aboutButton" onClick={scrollAbout}>
                       ABOUT
                     </span>
                   </li>
-                  <li className="link linkMobile">
+                  <li className="link linkDesktop">
                     <span id="contactsButton" onClick={scrollContacts}>
                       CONTACTS
                     </span>
                   </li>
                 </ul>
-                <span className="closebtn" onClick={closeNav}>
-                  &times;
-                </span>
               </div>
-            </div>
-          </>
-        )}
-        {isDesktop && (
-          <>
-            <div className="left leftDesktop">
-              <span onClick={scrollHome}>
-                <img className="logo logoDesktop" src={logo} alt="logo" />
-              </span>
-            </div>
-            <div className="right rightDesktop">
-              <ul className="links linksDesktop">
-                <li className="link linkDesktop">
-                  <span className="active" id="homeButton" onClick={scrollHome}>
-                    HOME
-                  </span>
-                </li>
-                <li className="link linkDesktop">
-                  <span id="aboutButton" onClick={scrollAbout}>
-                    ABOUT
-                  </span>
-                </li>
-                <li className="link linkDesktop">
-                  <span id="contactsButton" onClick={scrollContacts}>
-                    CONTACTS
-                  </span>
-                </li>
-              </ul>
             </div>
           </>
         )}

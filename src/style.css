@@ -41,7 +41,7 @@ body {
   text-align: center;
   font-family: "Staatliches", cursive;
   color: white;
-  padding-bottom: 1vh;
+  padding-bottom: 1vw;
 }
 button:focus,
 button:active:focus,
@@ -52,20 +52,18 @@ button.active.focus {
   outline: none !important;
 }
 /*NAV*/
-.navbar {
+.nav {
   position: fixed;
   width: 100%;
   top: 0;
-  height: 20vh;
   z-index: 999 !important;
+  transition: 0.4s;
+}
+.navbar {
+  width: 100%;
 }
 .left {
   float: left;
-}
-.logo {
-  width: 22vh;
-  margin: 5vh;
-  cursor: pointer;
 }
 .right {
   float: right;
@@ -77,9 +75,6 @@ button.active.focus {
   font-family: "Staatliches", cursive;
 }
 /*HOME*/
-.home {
-  padding-top: 20vh;
-}
 .homeImage {
   border: none;
   background: transparent;
@@ -103,6 +98,13 @@ button.active.focus {
 /*----------------MOBILE----------------*/
 
 /*NAV*/
+.navMobile {
+  height: 30vw;
+}
+.logoMobile {
+  width: 40vw;
+  margin: 4vw;
+}
 .structure {
   width: 35px;
   height: 5px;
@@ -112,8 +114,7 @@ button.active.focus {
   cursor: pointer;
 }
 .navbarMobile {
-  margin-right: 5vh;
-  margin-top: 1vh;
+  margin: 5vw;
 }
 .sidenav {
   height: 100%;
@@ -145,10 +146,13 @@ button.active.focus {
 }
 .linkMobile {
   font-size: 10vw;
-  margin-top: 2vh;
-  margin-bottom: 4vh;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
 }
 /*HOME*/
+.homeMobile {
+  padding-top: 35vw;
+}
 .homeImageTitle {
   text-align: left;
   font-size: 5vw;
@@ -180,16 +184,24 @@ button.active.focus {
 /*----------------DESKTOP----------------*/
 
 /*NAV*/
+.navDesktop {
+  height: 10vw;
+}
+.logoDesktop {
+  width: 12vw;
+  margin: 2vw;
+  cursor: pointer;
+}
 .linksDesktop {
-  font-size: 3vh;
+  font-size: 1.5vw;
   padding: 0;
-  margin-top: 2vh;
+  margin: 2vw;
 }
 .linkDesktop {
   display: inline;
 }
 .linkDesktop span {
-  margin: 50px;
+  margin: 2vw;
   text-decoration: none;
   color: white;
   cursor: pointer;
@@ -221,11 +233,13 @@ button.active.focus {
 }
 .active {
   background: red;
-  transition: 1s;
 }
 /*HOME*/
+.homeDesktop {
+  padding-top: 11vw;
+}
 .imageContainerDesktop {
-  height: 50vh;
+  height: 30vw;
   margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 5vw;
