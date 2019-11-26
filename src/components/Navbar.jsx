@@ -101,7 +101,7 @@ export default function Navbar() {
         {isMobile && (
           <>
             <div className="left leftMobile">
-              <span>
+              <span onClick={scrollHome}>
                 <img className="logo logoMobile" src={logo} alt="logo" />
               </span>
             </div>
@@ -143,7 +143,7 @@ export default function Navbar() {
         {isDesktop && (
           <>
             <div className="left leftDesktop">
-              <span>
+              <span onClick={scrollHome}>
                 <img className="logo logoDesktop" src={logo} alt="logo" />
               </span>
             </div>
