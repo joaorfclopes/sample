@@ -37,6 +37,9 @@ body {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+.loaderIcon > img {
+  width: 15vh;
+}
 .view {
   text-align: center;
   font-family: "Staatliches", cursive;
