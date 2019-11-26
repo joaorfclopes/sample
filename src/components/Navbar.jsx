@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assets/svg/logo.svg";
 import { useMediaQuery } from "react-responsive";
+import Fade from "react-reveal/Fade";
 
 let wasClicked = false;
 
@@ -159,73 +160,79 @@ export default function Navbar() {
   }
 
   return (
-    <div className="navbar">
-      {isMobile && (
-        <>
-          <div className="left leftMobile">
-            <span onClick={scrollHome}>
-              <img className="logo logoMobile" src={logo} alt="logo" />
-            </span>
-          </div>
-          <div className="right rightMobile">
-            <div className="navbarMobile" onClick={openNav}>
-              <div className="structure bar1"></div>
-              <div className="structure bar2"></div>
-              <div className="structure bar3"></div>
+    <Fade top>
+      <div className="navbar">
+        {isMobile && (
+          <>
+            <div className="left leftMobile">
+              <span onClick={scrollHome}>
+                <img className="logo logoMobile" src={logo} alt="logo" />
+              </span>
             </div>
-            <div id="sidenav" className="sidenav">
-              <ul className="links linksMobile">
-                <li className="link linkMobile">
+            <div className="right rightMobile">
+              <div className="navbarMobile" onClick={openNav}>
+                <div className="structure bar1"></div>
+                <div className="structure bar2"></div>
+                <div className="structure bar3"></div>
+              </div>
+              <div id="sidenav" className="sidenav">
+                <ul className="links linksMobile">
+                  <li className="link linkMobile">
+                    <span
+                      className="active"
+                      id="homeButton"
+                      onClick={scrollHome}
+                    >
+                      HOME
+                    </span>
+                  </li>
+                  <li className="link linkMobile">
+                    <span id="aboutButton" onClick={scrollAbout}>
+                      ABOUT
+                    </span>
+                  </li>
+                  <li className="link linkMobile">
+                    <span id="contactsButton" onClick={scrollContacts}>
+                      CONTACTS
+                    </span>
+                  </li>
+                </ul>
+                <span className="closebtn" onClick={closeNav}>
+                  &times;
+                </span>
+              </div>
+            </div>
+          </>
+        )}
+        {isDesktop && (
+          <>
+            <div className="left leftDesktop">
+              <span onClick={scrollHome}>
+                <img className="logo logoDesktop" src={logo} alt="logo" />
+              </span>
+            </div>
+            <div className="right rightDesktop">
+              <ul className="links linksDesktop">
+                <li className="link linkDesktop">
                   <span className="active" id="homeButton" onClick={scrollHome}>
                     HOME
                   </span>
                 </li>
-                <li className="link linkMobile">
+                <li className="link linkDesktop">
                   <span id="aboutButton" onClick={scrollAbout}>
                     ABOUT
                   </span>
                 </li>
-                <li className="link linkMobile">
+                <li className="link linkDesktop">
                   <span id="contactsButton" onClick={scrollContacts}>
                     CONTACTS
                   </span>
                 </li>
               </ul>
-              <span className="closebtn" onClick={closeNav}>
-                &times;
-              </span>
             </div>
-          </div>
-        </>
-      )}
-      {isDesktop && (
-        <>
-          <div className="left leftDesktop">
-            <span onClick={scrollHome}>
-              <img className="logo logoDesktop" src={logo} alt="logo" />
-            </span>
-          </div>
-          <div className="right rightDesktop">
-            <ul className="links linksDesktop">
-              <li className="link linkDesktop">
-                <span className="active" id="homeButton" onClick={scrollHome}>
-                  HOME
-                </span>
-              </li>
-              <li className="link linkDesktop">
-                <span id="aboutButton" onClick={scrollAbout}>
-                  ABOUT
-                </span>
-              </li>
-              <li className="link linkDesktop">
-                <span id="contactsButton" onClick={scrollContacts}>
-                  CONTACTS
-                </span>
-              </li>
-            </ul>
-          </div>
-        </>
-      )}
-    </div>
+          </>
+        )}
+      </div>
+    </Fade>
   );
 }

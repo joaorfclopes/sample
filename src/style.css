@@ -5,7 +5,7 @@
   src: url("./fonts/Staatliches-Regular.ttf");
 }
 html {
-  background: #fcdda4;
+  background: #fde086;
   -ms-overflow-style: none;
   scrollbar-width: none !important;
   scroll-behavior: smooth;
@@ -25,7 +25,7 @@ body {
   width: 100%;
   height: 100vh;
   z-index: 1000;
-  background: white;
+  background: #fde086;
 }
 .loader--hide {
   opacity: 0;
@@ -43,6 +43,14 @@ body {
   font-family: "Staatliches", cursive;
   color: white;
   padding-bottom: 1vh;
+}
+button:focus,
+button:active:focus,
+button.active:focus,
+button.focus,
+button:active.focus,
+button.active.focus {
+  outline: none !important;
 }
 /*NAV*/
 .navbar {
@@ -86,7 +94,6 @@ body {
 }
 /*ABOUT*/
 .about {
-  padding-top: 20vh;
   height: 100vh;
 }
 /*CONTACTS*/
@@ -143,13 +150,32 @@ body {
   margin-bottom: 4vh;
 }
 /*HOME*/
-.imageMobile {
-  width: 100%;
+.homeImageTitle {
+  text-align: left;
+  font-size: 5vw;
 }
 .homeImageMobile {
   margin-left: 10vw;
   margin-right: 10vw;
-  margin-bottom: 20px;
+  margin-bottom: 15vw;
+}
+.imageMobile {
+  width: 100%;
+}
+.modal-content {
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+  border: none;
+}
+.modalHeader {
+  border: none;
+}
+.modalBody {
+  padding-top: 0;
+}
+.modalText {
+  font-family: "Staatliches", cursive;
 }
 
 /*----------------DESKTOP----------------*/
@@ -203,7 +229,7 @@ body {
   height: 50vh;
   margin-left: 10vw;
   margin-right: 10vw;
-  margin-bottom: 100px;
+  margin-bottom: 5vw;
 }
 .homeLeftImage {
   float: left;
@@ -234,4 +260,10 @@ body {
   height: 100%;
   width: 50%;
   overflow: hidden;
+}
+.homeText > h1 {
+  font-size: 2.5vw;
+}
+.homeText > h3 {
+  font-size: 1.5vw;
 }
