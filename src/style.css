@@ -8,7 +8,6 @@ html {
   background: #fde086;
   -ms-overflow-style: none;
   scrollbar-width: none !important;
-  scroll-behavior: smooth;
 }
 html::-webkit-scrollbar {
   width: 0 !important;
