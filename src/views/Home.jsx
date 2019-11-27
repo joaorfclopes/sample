@@ -2,16 +2,16 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
 import ProgressiveImage from "react-progressive-image";
-import image1Smalll from "../assets/images/image1Small.gif";
-import image1 from "../assets/images/image1.gif";
-import image2Smalll from "../assets/images/image2Small.gif";
-import image2 from "../assets/images/image2.gif";
-import image3Smalll from "../assets/images/image3Small.gif";
-import image3 from "../assets/images/image3.gif";
-import image4Smalll from "../assets/images/image4Small.gif";
-import image4 from "../assets/images/image4.gif";
-import Fade from "react-reveal/Fade";
+import image1Smalll from "../assets/images/image1Small.jpg";
+import image1 from "../assets/images/image1.jpg";
+import image2Smalll from "../assets/images/image2Small.jpg";
+import image2 from "../assets/images/image2.jpg";
+import image3Smalll from "../assets/images/image3Small.jpg";
+import image3 from "../assets/images/image3.jpg";
+import image4Smalll from "../assets/images/image4Small.jpg";
+import image4 from "../assets/images/image4.jpg";
 import HomeModal from "../components/HomeModal";
+import Fade from "react-reveal/Fade";
 
 export default function Home() {
   const isMobile = useMediaQuery({
