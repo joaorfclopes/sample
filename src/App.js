@@ -1,9 +1,19 @@
 import React, { Component } from "react";
 import Main from "./views/Main";
+
+let body = document.getElementsByTagName("body")[0];
+
 class App extends Component {
-  
+  componentWillMount() {
+    body.style.overflow = "hidden";
+    this.props.showLoader();
+  }
+
   componentDidMount() {
-    this.props.hideLoader();
+    setTimeout(() => {
+      body.style.overflow = "visible";
+      this.props.hideLoader();
+    }, 1500);
   }
 
   render() {

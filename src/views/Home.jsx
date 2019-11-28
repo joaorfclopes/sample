@@ -12,8 +12,9 @@ import image4Smalll from "../assets/images/image4Small.jpg";
 import image4 from "../assets/images/image4.jpg";
 import HomeModal from "../components/HomeModal";
 import Fade from "react-reveal/Fade";
+import ReactDelayRender from 'react-delay-render';
 
-export default function Home() {
+function Home() {
   const isMobile = useMediaQuery({
     query: "(max-device-width: 1190px)"
   });
@@ -27,115 +28,128 @@ export default function Home() {
     <div className="home view">
       {isMobile && (
         <>
-          <div className="homeMobile">
-            <div className="homeModal">
-              <HomeModal show={modalShow} onHide={() => setModalShow(false)} />
+          <Fade>
+            <div className="homeMobile">
+              <div className="homeModal">
+                <HomeModal
+                  show={modalShow}
+                  onHide={() => setModalShow(false)}
+                />
+              </div>
+              <Fade bottom>
+                <Card
+                  className="homeImage homeImageMobile"
+                  onClick={() => setModalShow(true)}
+                >
+                  <Card.Title className="homeImageTitle">
+                    Lorem ipsum
+                  </Card.Title>
+                  <Card.Body className="imageCard imageCardMobile">
+                    <ProgressiveImage
+                      className="progressiveImage progressiveImageMobile"
+                      src={image1}
+                      placeholder={image1Smalll}
+                      delay={1000}
+                    >
+                      {src => (
+                        <div className="imageContainer imageContainerMobile">
+                          <img
+                            className="image imageMobile"
+                            src={src}
+                            alt="image1"
+                          />
+                        </div>
+                      )}
+                    </ProgressiveImage>
+                  </Card.Body>
+                </Card>
+              </Fade>
+              <Fade bottom>
+                <Card
+                  className="homeImage homeImageMobile"
+                  onClick={() => setModalShow(true)}
+                >
+                  <Card.Title className="homeImageTitle">
+                    Lorem ipsum
+                  </Card.Title>
+                  <Card.Body className="imageCard imageCardMobile">
+                    <ProgressiveImage
+                      className="progressiveImage progressiveImageMobile"
+                      src={image2}
+                      placeholder={image2Smalll}
+                      delay={1000}
+                    >
+                      {src => (
+                        <div className="imageContainer imageContainerMobile">
+                          <img
+                            className="image imageMobile"
+                            src={src}
+                            alt="image2"
+                          />
+                        </div>
+                      )}
+                    </ProgressiveImage>
+                  </Card.Body>
+                </Card>
+              </Fade>
+              <Fade bottom>
+                <Card
+                  className="homeImage homeImageMobile"
+                  onClick={() => setModalShow(true)}
+                >
+                  <Card.Title className="homeImageTitle">
+                    Lorem ipsum
+                  </Card.Title>
+                  <Card.Body className="imageCard imageCardMobile">
+                    <ProgressiveImage
+                      className="progressiveImage progressiveImageMobile"
+                      src={image3}
+                      placeholder={image3Smalll}
+                      delay={1000}
+                    >
+                      {src => (
+                        <div className="imageContainer imageContainerMobile">
+                          <img
+                            className="image imageMobile"
+                            src={src}
+                            alt="image3"
+                          />
+                        </div>
+                      )}
+                    </ProgressiveImage>
+                  </Card.Body>
+                </Card>
+              </Fade>
+              <Fade bottom>
+                <Card
+                  className="homeImage homeImageMobile"
+                  onClick={() => setModalShow(true)}
+                >
+                  <Card.Title className="homeImageTitle">
+                    Lorem ipsum
+                  </Card.Title>
+                  <Card.Body className="imageCard imageCardMobile">
+                    <ProgressiveImage
+                      className="progressiveImage progressiveImageMobile"
+                      src={image4}
+                      placeholder={image4Smalll}
+                      delay={1000}
+                    >
+                      {src => (
+                        <div className="imageContainer imageContainerMobile">
+                          <img
+                            className="image imageMobile"
+                            src={src}
+                            alt="image4"
+                          />
+                        </div>
+                      )}
+                    </ProgressiveImage>
+                  </Card.Body>
+                </Card>
+              </Fade>
             </div>
-            <Fade bottom>
-              <Card
-                className="homeImage homeImageMobile"
-                onClick={() => setModalShow(true)}
-              >
-                <Card.Title className="homeImageTitle">Lorem ipsum</Card.Title>
-                <Card.Body className="imageCard imageCardMobile">
-                  <ProgressiveImage
-                    className="progressiveImage progressiveImageMobile"
-                    src={image1}
-                    placeholder={image1Smalll}
-                    delay={1000}
-                  >
-                    {src => (
-                      <div className="imageContainer imageContainerMobile">
-                        <img
-                          className="image imageMobile"
-                          src={src}
-                          alt="image1"
-                        />
-                      </div>
-                    )}
-                  </ProgressiveImage>
-                </Card.Body>
-              </Card>
-            </Fade>
-            <Fade bottom>
-              <Card
-                className="homeImage homeImageMobile"
-                onClick={() => setModalShow(true)}
-              >
-                <Card.Title className="homeImageTitle">Lorem ipsum</Card.Title>
-                <Card.Body className="imageCard imageCardMobile">
-                  <ProgressiveImage
-                    className="progressiveImage progressiveImageMobile"
-                    src={image2}
-                    placeholder={image2Smalll}
-                    delay={1000}
-                  >
-                    {src => (
-                      <div className="imageContainer imageContainerMobile">
-                        <img
-                          className="image imageMobile"
-                          src={src}
-                          alt="image2"
-                        />
-                      </div>
-                    )}
-                  </ProgressiveImage>
-                </Card.Body>
-              </Card>
-            </Fade>
-            <Fade bottom>
-              <Card
-                className="homeImage homeImageMobile"
-                onClick={() => setModalShow(true)}
-              >
-                <Card.Title className="homeImageTitle">Lorem ipsum</Card.Title>
-                <Card.Body className="imageCard imageCardMobile">
-                  <ProgressiveImage
-                    className="progressiveImage progressiveImageMobile"
-                    src={image3}
-                    placeholder={image3Smalll}
-                    delay={1000}
-                  >
-                    {src => (
-                      <div className="imageContainer imageContainerMobile">
-                        <img
-                          className="image imageMobile"
-                          src={src}
-                          alt="image3"
-                        />
-                      </div>
-                    )}
-                  </ProgressiveImage>
-                </Card.Body>
-              </Card>
-            </Fade>
-            <Fade bottom>
-              <Card
-                className="homeImage homeImageMobile"
-                onClick={() => setModalShow(true)}
-              >
-                <Card.Title className="homeImageTitle">Lorem ipsum</Card.Title>
-                <Card.Body className="imageCard imageCardMobile">
-                  <ProgressiveImage
-                    className="progressiveImage progressiveImageMobile"
-                    src={image4}
-                    placeholder={image4Smalll}
-                    delay={1000}
-                  >
-                    {src => (
-                      <div className="imageContainer imageContainerMobile">
-                        <img
-                          className="image imageMobile"
-                          src={src}
-                          alt="image4"
-                        />
-                      </div>
-                    )}
-                  </ProgressiveImage>
-                </Card.Body>
-              </Card>
-            </Fade>
-          </div>
+          </Fade>
         </>
       )}
       {isDesktop && (
@@ -287,3 +301,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default ReactDelayRender({ delay: 2000 })(Home);
