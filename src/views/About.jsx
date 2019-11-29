@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDelayRender from "react-delay-render";
 import $ from "jquery";
+import { useMediaQuery } from "react-responsive";
 
 function activeAbout() {
   $("#homeButton").removeClass("active");
@@ -22,7 +23,31 @@ $(window).scroll(function() {
 });
 
 function About() {
-  return <div className="about view"></div>;
+  const isMobile = useMediaQuery({
+    query: "(max-device-width: 700px)"
+  });
+  const isDesktop = useMediaQuery({
+    query: "(min-device-width: 700px)"
+  });
+
+  return (
+    <div className="about view">
+      {isMobile && (
+        <>
+          <div className="aboutMobile">
+            <h1>About</h1>
+          </div>
+        </>
+      )}
+      {isDesktop && (
+        <>
+          <div className="aboutMobile">
+            <h1>About</h1>
+          </div>
+        </>
+      )}
+    </div>
+  );
 }
 
 export default ReactDelayRender({ delay: 2000 })(About);

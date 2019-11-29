@@ -57,10 +57,7 @@ function Home() {
                 />
               </div>
               <Fade bottom>
-                <Card
-                  className="homeImage homeImageMobile"
-                  onClick={() => setModalShow(true)}
-                >
+                <Card className="homeImage homeImageMobile">
                   <Card.Title className="homeImageTitle">
                     Lorem ipsum
                   </Card.Title>
@@ -74,6 +71,7 @@ function Home() {
                       {src => (
                         <div className="imageContainer imageContainerMobile">
                           <img
+                            onClick={() => setModalShow(true)}
                             className="image imageMobile"
                             src={src}
                             alt="image1"
@@ -85,10 +83,7 @@ function Home() {
                 </Card>
               </Fade>
               <Fade bottom>
-                <Card
-                  className="homeImage homeImageMobile"
-                  onClick={() => setModalShow(true)}
-                >
+                <Card className="homeImage homeImageMobile">
                   <Card.Title className="homeImageTitle">
                     Lorem ipsum
                   </Card.Title>
@@ -102,6 +97,7 @@ function Home() {
                       {src => (
                         <div className="imageContainer imageContainerMobile">
                           <img
+                            onClick={() => setModalShow(true)}
                             className="image imageMobile"
                             src={src}
                             alt="image2"
@@ -113,10 +109,7 @@ function Home() {
                 </Card>
               </Fade>
               <Fade bottom>
-                <Card
-                  className="homeImage homeImageMobile"
-                  onClick={() => setModalShow(true)}
-                >
+                <Card className="homeImage homeImageMobile">
                   <Card.Title className="homeImageTitle">
                     Lorem ipsum
                   </Card.Title>
@@ -130,6 +123,7 @@ function Home() {
                       {src => (
                         <div className="imageContainer imageContainerMobile">
                           <img
+                            onClick={() => setModalShow(true)}
                             className="image imageMobile"
                             src={src}
                             alt="image3"
@@ -141,10 +135,7 @@ function Home() {
                 </Card>
               </Fade>
               <Fade bottom>
-                <Card
-                  className="homeImage homeImageMobile"
-                  onClick={() => setModalShow(true)}
-                >
+                <Card className="homeImage homeImageMobile">
                   <Card.Title className="homeImageTitle">
                     Lorem ipsum
                   </Card.Title>
@@ -158,6 +149,7 @@ function Home() {
                       {src => (
                         <div className="imageContainer imageContainerMobile">
                           <img
+                            onClick={() => setModalShow(true)}
                             className="image imageMobile"
                             src={src}
                             alt="image4"

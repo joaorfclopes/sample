@@ -178,7 +178,7 @@ button.active.focus {
 }
 /*HOME*/
 .homeMobile {
-  padding-top: 40vw;
+  padding-top: 25vw;
 }
 .homeImageTitle {
   text-align: left;
@@ -187,7 +187,7 @@ button.active.focus {
 .homeImageMobile {
   margin-left: 10vw;
   margin-right: 10vw;
-  margin-bottom: 15vw;
+  margin-top: 15vw;
 }
 .imageMobile {
   width: 100%;
@@ -208,6 +208,14 @@ button.active.focus {
 }
 .modalText {
   font-family: "Staatliches", cursive;
+}
+/*ABOUT*/
+.aboutMobile {
+  padding-top: 30vw;
+}
+/*CONTACTS*/
+.contactsMobile {
+  padding-top: 30vw;
 }
 
 /*----------------DESKTOP----------------*/
@@ -266,11 +274,11 @@ button.active.focus {
 }
 /*HOME*/
 .homeDesktop {
-  padding-top: 15vw;
+  padding-top: 5vw;
 }
 .imageContainerDesktop {
   height: 30vw;
-  margin-bottom: 10vw;
+  margin-top: 10vw;
 }
 .homeLeftImage {
   padding-left: 10vw;
