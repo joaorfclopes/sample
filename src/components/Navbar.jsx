@@ -61,10 +61,10 @@ function scrollContacts() {
 
 export default function Navbar() {
   const isMobile = useMediaQuery({
-    query: "(max-device-width: 1190px)"
+    query: "(max-device-width: 700px)"
   });
   const isDesktop = useMediaQuery({
-    query: "(min-device-width: 1190px)"
+    query: "(min-device-width: 700px)"
   });
 
   return (

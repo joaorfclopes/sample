@@ -17,10 +17,10 @@ import $ from "jquery";
 
 function Home() {
   const isMobile = useMediaQuery({
-    query: "(max-device-width: 1190px)"
+    query: "(max-device-width: 700px)"
   });
   const isDesktop = useMediaQuery({
-    query: "(min-device-width: 1190px)"
+    query: "(min-device-width: 700px)"
   });
 
   const [modalShow, setModalShow] = React.useState(false);
