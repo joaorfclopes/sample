@@ -13,8 +13,14 @@ function closeNav() {
 $(window).scroll(function() {
   if ($(window).scrollTop() >= 100) {
     $(".nav").css("background-color", "#111");
+    $(".navDesktop").css("height", "8vw");
+    $(".logoDesktop").css("width", "10vw");
+    $(".logoDesktop").css("margin", "1vw");
   } else {
     $(".nav").css("background-color", "transparent");
+    $(".navDesktop").css("height", "10vw");
+    $(".logoDesktop").css("width", "12vw");
+    $(".logoDesktop").css("margin", "2vw");
   }
 });
 
@@ -62,12 +68,12 @@ export default function Navbar() {
   });
 
   return (
-    <div className="nav">
+    <div>
       {isMobile && (
         <>
-          <div className="navbar navMobile">
+          <div className="nav navbar navMobile">
             <div className="left leftMobile">
-              <span onClick={scrollHome}>
+              <span onClick={scrollHome} >
                 <img className="logo logoMobile" src={logo} alt="logo" />
               </span>
             </div>
@@ -110,7 +116,7 @@ export default function Navbar() {
 
       {isDesktop && (
         <>
-          <div className="navbar navDesktop">
+          <div className="nav navbar navDesktop">
             <div className="left leftDesktop">
               <span onClick={scrollHome}>
                 <img className="logo logoDesktop" src={logo} alt="logo" />

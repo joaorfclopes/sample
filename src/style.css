@@ -60,7 +60,7 @@ button.active.focus {
   width: 100%;
   top: 0;
   z-index: 999 !important;
-  transition: 0.4s;
+  transition: 0.3s;
   opacity: 0;
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1s;
@@ -220,6 +220,7 @@ button.active.focus {
   width: 12vw;
   margin: 2vw;
   cursor: pointer;
+  transition: 0.3s;
 }
 .linksDesktop {
   font-size: 1.5vw;
