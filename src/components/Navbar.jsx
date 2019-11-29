@@ -10,49 +10,11 @@ function closeNav() {
   document.getElementById("sidenav").style.width = "0";
 }
 
-function activeHome() {
-  $("#homeButton").addClass("active");
-  $("#aboutButton").removeClass("active");
-  $("#contactsButton").removeClass("active");
-}
-function activeAbout() {
-  $("#homeButton").removeClass("active");
-  $("#aboutButton").addClass("active");
-  $("#contactsButton").removeClass("active");
-}
-function activeContacts() {
-  $("#homeButton").removeClass("active");
-  $("#aboutButton").removeClass("active");
-  $("#contactsButton").addClass("active");
-}
-
 $(window).scroll(function() {
   if ($(window).scrollTop() >= 100) {
     $(".nav").css("background-color", "#111");
   } else {
     $(".nav").css("background-color", "transparent");
-  }
-  const distanceHome = $(".home").offset().top;
-  const distanceAbout = $(".about").offset().top;
-  const distanceContacts = $(".contacts").offset().top;
-  if (
-    $(window).scrollTop() >= distanceHome - 300 &&
-    $(window).scrollTop() <= distanceAbout - 300 &&
-    $(window).scrollTop() <= distanceContacts - 300
-  ) {
-    activeHome();
-  } else if (
-    $(window).scrollTop() >= distanceHome - 300 &&
-    $(window).scrollTop() >= distanceAbout - 300 &&
-    $(window).scrollTop() <= distanceContacts - 300
-  ) {
-    activeAbout();
-  } else if (
-    $(window).scrollTop() >= distanceHome - 300 &&
-    $(window).scrollTop() >= distanceAbout - 300 &&
-    $(window).scrollTop() >= distanceContacts - 300
-  ) {
-    activeContacts();
   }
 });
 
