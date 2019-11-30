@@ -4,12 +4,16 @@ import Main from "./views/Main";
 let body = document.getElementsByTagName("body")[0];
 
 class App extends Component {
-  componentWillMount() {
+  load() {
     body.style.overflow = "hidden";
     this.props.showLoader();
   }
 
-  load() {
+  componentWillMount() {
+    this.load();
+  }
+
+  renderApp() {
     document.onreadystatechange = () => {
       if (document.readyState === "complete") {
         setTimeout(() => {
@@ -21,7 +25,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.load();
+    this.renderApp();
   }
 
   render() {
