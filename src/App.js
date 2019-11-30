@@ -9,11 +9,19 @@ class App extends Component {
     this.props.showLoader();
   }
 
+  load() {
+    document.onreadystatechange = () => {
+      if (document.readyState === "complete") {
+        setTimeout(() => {
+          body.style.overflow = "visible";
+          this.props.hideLoader();
+        }, 1000);
+      }
+    };
+  }
+
   componentDidMount() {
-    setTimeout(() => {
-      body.style.overflow = "visible";
-      this.props.hideLoader();
-    }, 2000);
+    this.load();
   }
 
   render() {

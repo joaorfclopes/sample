@@ -85,6 +85,18 @@ button.active.focus {
   top: 0;
   z-index: 999 !important;
   transition: 0.3s;
+  opacity: 0;
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .navbar {
   width: 100%;
@@ -110,8 +122,8 @@ button.active.focus {
   padding: 0;
   overflow: hidden;
 }
-.progressiveImage::after {
-  transition: 1s !important;
+.image {
+  width: 100%;
 }
 /*ABOUT*/
 .about {
@@ -188,9 +200,6 @@ button.active.focus {
   margin-left: 10vw;
   margin-right: 10vw;
   margin-top: 15vw;
-}
-.imageMobile {
-  width: 100%;
 }
 .modal-content {
   -webkit-border-radius: 0px !important;

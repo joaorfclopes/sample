@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDelayRender from "react-delay-render";
 import $ from "jquery";
 import { useMediaQuery } from "react-responsive";
 
@@ -22,7 +21,7 @@ $(window).scroll(function() {
   }
 });
 
-function Contacts() {
+export default function Contacts() {
   const isMobile = useMediaQuery({
     query: "(max-device-width: 700px)"
   });
@@ -49,5 +48,3 @@ function Contacts() {
     </div>
   );
 }
-
-export default ReactDelayRender({ delay: 2000 })(Contacts);

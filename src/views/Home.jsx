@@ -12,10 +12,28 @@ import image4Smalll from "../assets/images/image4Small.jpg";
 import image4 from "../assets/images/image4.jpg";
 import HomeModal from "../components/HomeModal";
 import Fade from "react-reveal/Fade";
-import ReactDelayRender from "react-delay-render";
 import $ from "jquery";
 
-function Home() {
+function activeHome() {
+  $("#homeButton").addClass("active");
+  $("#aboutButton").removeClass("active");
+  $("#contactsButton").removeClass("active");
+}
+
+$(window).scroll(function() {
+  const distanceHome = $(".home").offset().top;
+  const distanceAbout = $(".about").offset().top;
+  const distanceContacts = $(".contacts").offset().top;
+  if (
+    $(window).scrollTop() >= distanceHome - 300 &&
+    $(window).scrollTop() <= distanceAbout - 300 &&
+    $(window).scrollTop() <= distanceContacts - 300
+  ) {
+    activeHome();
+  }
+});
+
+export default function Home() {
   const isMobile = useMediaQuery({
     query: "(max-device-width: 700px)"
   });
@@ -24,25 +42,6 @@ function Home() {
   });
 
   const [modalShow, setModalShow] = React.useState(false);
-
-  function activeHome() {
-    $("#homeButton").addClass("active");
-    $("#aboutButton").removeClass("active");
-    $("#contactsButton").removeClass("active");
-  }
-
-  $(window).scroll(function() {
-    const distanceHome = $(".home").offset().top;
-    const distanceAbout = $(".about").offset().top;
-    const distanceContacts = $(".contacts").offset().top;
-    if (
-      $(window).scrollTop() >= distanceHome - 300 &&
-      $(window).scrollTop() <= distanceAbout - 300 &&
-      $(window).scrollTop() <= distanceContacts - 300
-    ) {
-      activeHome();
-    }
-  });
 
   return (
     <div className="home view">
@@ -66,7 +65,6 @@ function Home() {
                       className="progressiveImage progressiveImageMobile"
                       src={image1}
                       placeholder={image1Smalll}
-                      delay={1000}
                     >
                       {src => (
                         <div className="imageContainer imageContainerMobile">
@@ -92,7 +90,6 @@ function Home() {
                       className="progressiveImage progressiveImageMobile"
                       src={image2}
                       placeholder={image2Smalll}
-                      delay={1000}
                     >
                       {src => (
                         <div className="imageContainer imageContainerMobile">
@@ -118,7 +115,6 @@ function Home() {
                       className="progressiveImage progressiveImageMobile"
                       src={image3}
                       placeholder={image3Smalll}
-                      delay={1000}
                     >
                       {src => (
                         <div className="imageContainer imageContainerMobile">
@@ -144,7 +140,6 @@ function Home() {
                       className="progressiveImage progressiveImageMobile"
                       src={image4}
                       placeholder={image4Smalll}
-                      delay={1000}
                     >
                       {src => (
                         <div className="imageContainer imageContainerMobile">
@@ -174,7 +169,6 @@ function Home() {
                     className="progressiveImage progressiveImageMobile"
                     src={image1}
                     placeholder={image1Smalll}
-                    delay={1000}
                   >
                     {src => (
                       <div className="imageContainer imageContainerMobile">
@@ -222,7 +216,6 @@ function Home() {
                     className="progressiveImage progressiveImageMobile"
                     src={image2}
                     placeholder={image2Smalll}
-                    delay={1000}
                   >
                     {src => (
                       <div className="imageContainer imageContainerMobile">
@@ -244,7 +237,6 @@ function Home() {
                     className="progressiveImage progressiveImageMobile"
                     src={image3}
                     placeholder={image3Smalll}
-                    delay={1000}
                   >
                     {src => (
                       <div className="imageContainer imageContainerMobile">
@@ -292,7 +284,6 @@ function Home() {
                     className="progressiveImage progressiveImageMobile"
                     src={image4}
                     placeholder={image4Smalll}
-                    delay={1000}
                   >
                     {src => (
                       <div className="imageContainer imageContainerMobile">
@@ -313,5 +304,3 @@ function Home() {
     </div>
   );
 }
-
-export default ReactDelayRender({ delay: 2000 })(Home);
