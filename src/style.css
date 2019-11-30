@@ -85,30 +85,6 @@ button.active.focus {
   top: 0;
   z-index: 999 !important;
   transition: 0.3s;
-  opacity: 0;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-  animation-name: fade;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-delay: 2s;
-}
-@-webkit-keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 .navbar {
   width: 100%;
