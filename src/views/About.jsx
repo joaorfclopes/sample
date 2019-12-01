@@ -40,7 +40,7 @@ export default function About() {
       )}
       {isDesktop && (
         <>
-          <div className="aboutMobile">
+          <div className="aboutDesktop">
             <h1>About</h1>
           </div>
         </>

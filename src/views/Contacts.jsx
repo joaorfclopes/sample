@@ -40,7 +40,7 @@ export default function Contacts() {
       )}
       {isDesktop && (
         <>
-          <div className="contactsMobile">
+          <div className="contactsDesktop">
             <h1>Contacts</h1>
           </div>
         </>

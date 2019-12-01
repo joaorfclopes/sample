@@ -329,3 +329,11 @@ button.active.focus {
 .homeText > h3 {
   font-size: 1.5vw;
 }
+/*ABOUT*/
+.aboutDesktop {
+  padding-top: 10vw;
+}
+/*CONTACTS*/
+.contactsDesktop {
+  padding-top: 10vw;
+}
