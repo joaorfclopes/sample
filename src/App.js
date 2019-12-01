@@ -19,7 +19,7 @@ class App extends Component {
         setTimeout(() => {
           body.style.overflow = "visible";
           this.props.hideLoader();
-        }, 1000);
+        }, 1500);
       }
     };
   }
