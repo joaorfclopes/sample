@@ -16,4 +16,4 @@ function Main() {
   );
 }
 
-export default ReactDelayRender({ delay: 1000 })(Main);
+export default ReactDelayRender({ delay: 1500 })(Main);
