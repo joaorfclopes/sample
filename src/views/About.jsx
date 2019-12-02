@@ -1,8 +1,8 @@
 import React from "react";
 import $ from "jquery";
 import { useMediaQuery } from "react-responsive";
-import { Card, CardGroup } from "react-bootstrap";
-/*import ProgressiveImage from "react-progressive-image";
+/*import { Card, CardGroup } from "react-bootstrap";
+import ProgressiveImage from "react-progressive-image";
 import pilot1 from "../assets/images/about/pilot1.jpg";
 import pilot2 from "../assets/images/about/pilot2.jpg";
 import pilot3 from "../assets/images/about/pilot3.jpg";
