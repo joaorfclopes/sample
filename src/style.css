@@ -83,7 +83,7 @@ button.active.focus {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 999 !important;
+  z-index: 999;
   transition: 0.3s;
   opacity: 0;
   animation-name: fade;
@@ -125,10 +125,6 @@ button.active.focus {
 .image {
   width: 100%;
 }
-/*ABOUT*/
-.about {
-  height: 100vh;
-}
 /*CONTACTS*/
 .contacts {
   height: 100vh;
@@ -159,7 +155,7 @@ button.active.focus {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   top: 0;
   right: 0;
   background-color: whitesmoke;
@@ -171,7 +167,7 @@ button.active.focus {
 .closebtn {
   position: absolute;
   font-size: 50px;
-  top: 5%;
+  top: 2%;
   right: 15%;
   color: #111;
 }
@@ -331,9 +327,53 @@ button.active.focus {
 }
 /*ABOUT*/
 .aboutDesktop {
-  padding-top: 10vw;
+  padding-top: 5vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 /*CONTACTS*/
 .contactsDesktop {
   padding-top: 10vw;
+}
+
+/*-------------DEV--------*/
+.aboutTitle {
+  margin-bottom: 3vw;
+  word-spacing: 0.5vw;
+  font-size: 2.5vw;
+}
+.pilotsContainer {
+  height: 30vw;
+  background: black;
+}
+.pilot {
+  height: 100%;
+  width: 25%;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.pilot:hover {
+  transition: 0.4s;
+  opacity: 0.4;
+}
+.pilot1 {
+  background: url("./assets/images/about/pilot1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.pilot2 {
+  background: url("./assets/images/about/pilot2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.pilot3 {
+  background: url("./assets/images/about/pilot3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.pilot4 {
+  background: url("./assets/images/about/pilot4.jpg");
+  background-size: cover;
+  background-position: center;
 }

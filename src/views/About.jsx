@@ -1,6 +1,12 @@
 import React from "react";
 import $ from "jquery";
 import { useMediaQuery } from "react-responsive";
+import { Card, CardGroup } from "react-bootstrap";
+/*import ProgressiveImage from "react-progressive-image";
+import pilot1 from "../assets/images/about/pilot1.jpg";
+import pilot2 from "../assets/images/about/pilot2.jpg";
+import pilot3 from "../assets/images/about/pilot3.jpg";
+import pilot4 from "../assets/images/about/pilot4.jpg";*/
 
 function activeAbout() {
   $("#homeButton").removeClass("active");
@@ -41,7 +47,13 @@ export default function About() {
       {isDesktop && (
         <>
           <div className="aboutDesktop">
-            <h1>About</h1>
+            <h1 className="aboutTitle aboutTitleDesktop">About Us</h1>
+            <div className="pilotsContainer pilotsContainerDesktop">
+              <div className="pilot pilot1"></div>
+              <div className="pilot pilot2"></div>
+              <div className="pilot pilot3"></div>
+              <div className="pilot pilot4"></div>
+            </div>
           </div>
         </>
       )}
