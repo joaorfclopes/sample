@@ -1,12 +1,16 @@
 import React from "react";
 import $ from "jquery";
 import { useMediaQuery } from "react-responsive";
-/*import { Card, CardGroup } from "react-bootstrap";
 import ProgressiveImage from "react-progressive-image";
 import pilot1 from "../assets/images/about/pilot1.jpg";
+import pilot1Small from "../assets/images/about/pilot1Small.jpg";
 import pilot2 from "../assets/images/about/pilot2.jpg";
+import pilot2Small from "../assets/images/about/pilot2Small.jpg";
 import pilot3 from "../assets/images/about/pilot3.jpg";
-import pilot4 from "../assets/images/about/pilot4.jpg";*/
+import pilot3Small from "../assets/images/about/pilot3Small.jpg";
+import pilot4 from "../assets/images/about/pilot4.jpg";
+import pilot4Small from "../assets/images/about/pilot4Small.jpg";
+import Fade from "react-reveal/Fade";
 
 function activeAbout() {
   $("#homeButton").removeClass("active");
@@ -47,13 +51,81 @@ export default function About() {
       {isDesktop && (
         <>
           <div className="aboutDesktop">
-            <h1 className="aboutTitle aboutTitleDesktop">About Us</h1>
-            <div className="pilotsContainer pilotsContainerDesktop">
-              <div className="pilot pilot1"></div>
-              <div className="pilot pilot2"></div>
-              <div className="pilot pilot3"></div>
-              <div className="pilot pilot4"></div>
-            </div>
+            <Fade top>
+              <h1 className="aboutTitle aboutTitleDesktop">About Us</h1>
+            </Fade>
+            <Fade bottom cascade>
+              <div className="pilotsContainer pilotsContainerDesktop">
+                <div className="pilot pilotDesktop pilot1">
+                  <ProgressiveImage
+                    className="progressiveImage progressiveImageDesktop"
+                    src={pilot1}
+                    placeholder={pilot1Small}
+                  >
+                    {src => (
+                      <div className="pilotContainer pilotContainerDesktop">
+                        <img
+                          className="imagePilot imagePilotDesktop"
+                          src={src}
+                          alt="pilot1"
+                        />
+                      </div>
+                    )}
+                  </ProgressiveImage>
+                </div>
+                <div className="pilot pilotDesktop pilot2">
+                  <ProgressiveImage
+                    className="progressiveImage progressiveImageDesktop"
+                    src={pilot2}
+                    placeholder={pilot2Small}
+                  >
+                    {src => (
+                      <div className="pilotContainer pilotContainerDesktop">
+                        <img
+                          className="imagePilot imagePilotDesktop"
+                          src={src}
+                          alt="pilot2"
+                        />
+                      </div>
+                    )}
+                  </ProgressiveImage>
+                </div>
+                <div className="pilot pilotDesktop pilot3">
+                  <ProgressiveImage
+                    className="progressiveImage progressiveImageDesktop"
+                    src={pilot3}
+                    placeholder={pilot3Small}
+                  >
+                    {src => (
+                      <div className="pilotContainer pilotContainerDesktop">
+                        <img
+                          className="imagePilot imagePilotDesktop"
+                          src={src}
+                          alt="pilot3"
+                        />
+                      </div>
+                    )}
+                  </ProgressiveImage>
+                </div>
+                <div className="pilot pilotDesktop pilot4">
+                  <ProgressiveImage
+                    className="progressiveImage progressiveImageDesktop"
+                    src={pilot4}
+                    placeholder={pilot4Small}
+                  >
+                    {src => (
+                      <div className="pilotContainer pilotContainerDesktop">
+                        <img
+                          className="imagePilot imagePilotDesktop"
+                          src={src}
+                          alt="pilot4"
+                        />
+                      </div>
+                    )}
+                  </ProgressiveImage>
+                </div>
+              </div>
+            </Fade>
           </div>
         </>
       )}

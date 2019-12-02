@@ -2,13 +2,13 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
 import ProgressiveImage from "react-progressive-image";
-import image1Smalll from "../assets/images/home/image1Small.jpg";
+import image1Small from "../assets/images/home/image1Small.jpg";
 import image1 from "../assets/images/home/image1.jpg";
-import image2Smalll from "../assets/images/home/image2Small.jpg";
+import image2Small from "../assets/images/home/image2Small.jpg";
 import image2 from "../assets/images/home/image2.jpg";
-import image3Smalll from "../assets/images/home/image3Small.jpg";
+import image3Small from "../assets/images/home/image3Small.jpg";
 import image3 from "../assets/images/home/image3.jpg";
-import image4Smalll from "../assets/images/home/image4Small.jpg";
+import image4Small from "../assets/images/home/image4Small.jpg";
 import image4 from "../assets/images/home/image4.jpg";
 import HomeModal from "../components/HomeModal";
 import Fade from "react-reveal/Fade";
@@ -64,7 +64,7 @@ export default function Home() {
                     <ProgressiveImage
                       className="progressiveImage progressiveImageMobile"
                       src={image1}
-                      placeholder={image1Smalll}
+                      placeholder={image1Small}
                     >
                       {src => (
                         <div className="imageContainer imageContainerMobile">
@@ -89,7 +89,7 @@ export default function Home() {
                     <ProgressiveImage
                       className="progressiveImage progressiveImageMobile"
                       src={image2}
-                      placeholder={image2Smalll}
+                      placeholder={image2Small}
                     >
                       {src => (
                         <div className="imageContainer imageContainerMobile">
@@ -114,7 +114,7 @@ export default function Home() {
                     <ProgressiveImage
                       className="progressiveImage progressiveImageMobile"
                       src={image3}
-                      placeholder={image3Smalll}
+                      placeholder={image3Small}
                     >
                       {src => (
                         <div className="imageContainer imageContainerMobile">
@@ -139,7 +139,7 @@ export default function Home() {
                     <ProgressiveImage
                       className="progressiveImage progressiveImageMobile"
                       src={image4}
-                      placeholder={image4Smalll}
+                      placeholder={image4Small}
                     >
                       {src => (
                         <div className="imageContainer imageContainerMobile">
@@ -168,7 +168,7 @@ export default function Home() {
                   <ProgressiveImage
                     className="progressiveImage progressiveImageMobile"
                     src={image1}
-                    placeholder={image1Smalll}
+                    placeholder={image1Small}
                   >
                     {src => (
                       <div className="imageContainer imageContainerMobile">
@@ -215,7 +215,7 @@ export default function Home() {
                   <ProgressiveImage
                     className="progressiveImage progressiveImageMobile"
                     src={image2}
-                    placeholder={image2Smalll}
+                    placeholder={image2Small}
                   >
                     {src => (
                       <div className="imageContainer imageContainerMobile">
@@ -236,7 +236,7 @@ export default function Home() {
                   <ProgressiveImage
                     className="progressiveImage progressiveImageMobile"
                     src={image3}
-                    placeholder={image3Smalll}
+                    placeholder={image3Small}
                   >
                     {src => (
                       <div className="imageContainer imageContainerMobile">
@@ -283,7 +283,7 @@ export default function Home() {
                   <ProgressiveImage
                     className="progressiveImage progressiveImageMobile"
                     src={image4}
-                    placeholder={image4Smalll}
+                    placeholder={image4Small}
                   >
                     {src => (
                       <div className="imageContainer imageContainerMobile">
