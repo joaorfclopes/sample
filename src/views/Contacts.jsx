@@ -9,16 +9,18 @@ function activeContacts() {
 }
 
 $(window).scroll(function() {
-  const distanceHome = $(".home").offset().top;
-  const distancecontacts = $(".contacts").offset().top;
-  const distanceContacts = $(".contacts").offset().top;
-  if (
-    $(window).scrollTop() >= distanceHome - 300 &&
-    $(window).scrollTop() >= distancecontacts - 300 &&
-    $(window).scrollTop() >= distanceContacts - 300
-  ) {
-    activeContacts();
-  }
+  try {
+    const distanceHome = $(".home").offset().top;
+    const distancecontacts = $(".contacts").offset().top;
+    const distanceContacts = $(".contacts").offset().top;
+    if (
+      $(window).scrollTop() >= distanceHome - 300 &&
+      $(window).scrollTop() >= distancecontacts - 300 &&
+      $(window).scrollTop() >= distanceContacts - 300
+    ) {
+      activeContacts();
+    }
+  } catch (error) {}
 });
 
 export default function Contacts() {

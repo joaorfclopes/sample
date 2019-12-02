@@ -19,16 +19,18 @@ function activeAbout() {
 }
 
 $(window).scroll(function() {
-  const distanceHome = $(".home").offset().top;
-  const distanceAbout = $(".about").offset().top;
-  const distanceContacts = $(".contacts").offset().top;
-  if (
-    $(window).scrollTop() >= distanceHome - 300 &&
-    $(window).scrollTop() >= distanceAbout - 300 &&
-    $(window).scrollTop() <= distanceContacts - 300
-  ) {
-    activeAbout();
-  }
+  try {
+    const distanceHome = $(".home").offset().top;
+    const distanceAbout = $(".about").offset().top;
+    const distanceContacts = $(".contacts").offset().top;
+    if (
+      $(window).scrollTop() >= distanceHome - 300 &&
+      $(window).scrollTop() >= distanceAbout - 300 &&
+      $(window).scrollTop() <= distanceContacts - 300
+    ) {
+      activeAbout();
+    }
+  } catch (error) {}
 });
 
 export default function About() {
