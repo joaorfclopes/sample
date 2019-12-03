@@ -283,7 +283,7 @@ button.active.focus {
 }
 .imageContainerDesktop {
   height: 30vw;
-  margin-top: 10vw;
+  margin-top: 5vw;
 }
 .homeLeftImage {
   padding-left: 10vw;
@@ -345,7 +345,6 @@ button.active.focus {
   height: 100%;
   width: 25%;
   display: inline-block;
-  cursor: pointer;
 }
 .imagePilotDesktop {
   width: 100%;
@@ -356,21 +355,27 @@ button.active.focus {
   transition: 0.4s;
   opacity: 0.3;
 }
+.imagePilotDesktop:hover + .pilotDescDesktop {
+  transition: 0.4s;
+  opacity: 1;
+}
 .pilotDescDesktop {
+  transition: 0.4s;
   position: absolute;
   bottom: 1vw;
   left: 1vw;
   text-align: left;
+  opacity: 0;
 }
-.pilotDescDesktop > h2 {
+.pilotDescDesktopName {
   font-size: 2vw;
   margin: 0;
 }
-.pilotDescDesktop > p {
+.pilotDescDesktopText {
   font-size: 1vw;
   margin: 0;
 }
 /*CONTACTS*/
 .contactsDesktop {
-  padding-top: 10vw;
+  padding-top: 5vw;
 }

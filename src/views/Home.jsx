@@ -13,6 +13,7 @@ import image4 from "../assets/images/home/image4.jpg";
 import HomeModal from "../components/HomeModal";
 import Fade from "react-reveal/Fade";
 import $ from "jquery";
+import ReactDelayRender from "react-delay-render";
 
 function activeHome() {
   $("#homeButton").addClass("active");
@@ -35,7 +36,7 @@ $(window).scroll(function() {
   } catch (error) {}
 });
 
-export default function Home() {
+function Home() {
   const isMobile = useMediaQuery({
     query: "(max-device-width: 700px)"
   });
@@ -306,3 +307,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default ReactDelayRender({ delay: 1500 })(Home);

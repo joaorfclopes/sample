@@ -1,6 +1,7 @@
 import React from "react";
 import $ from "jquery";
 import { useMediaQuery } from "react-responsive";
+import ReactDelayRender from "react-delay-render";
 
 function activeContacts() {
   $("#homeButton").removeClass("active");
@@ -23,7 +24,7 @@ $(window).scroll(function() {
   } catch (error) {}
 });
 
-export default function Contacts() {
+function Contacts() {
   const isMobile = useMediaQuery({
     query: "(max-device-width: 700px)"
   });
@@ -50,3 +51,5 @@ export default function Contacts() {
     </div>
   );
 }
+
+export default ReactDelayRender({ delay: 1500 })(Contacts);

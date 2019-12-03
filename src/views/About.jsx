@@ -11,6 +11,7 @@ import pilot3Small from "../assets/images/about/pilot3Small.jpg";
 import pilot4 from "../assets/images/about/pilot4.jpg";
 import pilot4Small from "../assets/images/about/pilot4Small.jpg";
 import Fade from "react-reveal/Fade";
+import ReactDelayRender from "react-delay-render";
 
 function activeAbout() {
   $("#homeButton").removeClass("active");
@@ -33,7 +34,7 @@ $(window).scroll(function() {
   } catch (error) {}
 });
 
-export default function About() {
+function About() {
   const isMobile = useMediaQuery({
     query: "(max-device-width: 700px)"
   });
@@ -71,6 +72,12 @@ export default function About() {
                           src={src}
                           alt="pilot1"
                         />
+                        <div className="pilotDescDesktop">
+                          <h2 className="pilotDescDesktopName">Lorem ipsum</h2>
+                          <p className="pilotDescDesktopText">
+                            dolor sit amet, consectetur adipiscing
+                          </p>
+                        </div>
                       </div>
                     )}
                   </ProgressiveImage>
@@ -88,6 +95,12 @@ export default function About() {
                           src={src}
                           alt="pilot2"
                         />
+                        <div className="pilotDescDesktop">
+                          <h2 className="pilotDescDesktopName">Lorem ipsum</h2>
+                          <p className="pilotDescDesktopText">
+                            dolor sit amet, consectetur adipiscing
+                          </p>
+                        </div>
                       </div>
                     )}
                   </ProgressiveImage>
@@ -105,6 +118,12 @@ export default function About() {
                           src={src}
                           alt="pilot3"
                         />
+                        <div className="pilotDescDesktop">
+                          <h2 className="pilotDescDesktopName">Lorem ipsum</h2>
+                          <p className="pilotDescDesktopText">
+                            dolor sit amet, consectetur adipiscing
+                          </p>
+                        </div>
                       </div>
                     )}
                   </ProgressiveImage>
@@ -122,6 +141,12 @@ export default function About() {
                           src={src}
                           alt="pilot4"
                         />
+                        <div className="pilotDescDesktop">
+                          <h2 className="pilotDescDesktopName">Lorem ipsum</h2>
+                          <p className="pilotDescDesktopText">
+                            dolor sit amet, consectetur adipiscing
+                          </p>
+                        </div>
                       </div>
                     )}
                   </ProgressiveImage>
@@ -134,3 +159,5 @@ export default function About() {
     </div>
   );
 }
+
+export default ReactDelayRender({ delay: 1500 })(About);

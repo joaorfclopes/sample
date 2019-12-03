@@ -3,9 +3,8 @@ import Navbar from "../components/Navbar";
 import Home from "./Home";
 import About from "./About";
 import Contacts from "./Contacts";
-import ReactDelayRender from "react-delay-render";
 
-function Main() {
+export default function Main() {
   return (
     <div className="main">
       <Navbar />
@@ -16,4 +15,3 @@ function Main() {
   );
 }
 
-export default ReactDelayRender({ delay: 1500 })(Main);

@@ -49,7 +49,7 @@ function scrollAbout() {
 function scrollContacts() {
   $("html, body").animate(
     {
-      scrollTop: $(".contacts").offset().top
+      scrollTop: $(".contacts").offset().top - 100
     },
     800
   );
