@@ -12,6 +12,7 @@ import pilot4 from "../assets/images/about/pilot4.jpg";
 import pilot4Small from "../assets/images/about/pilot4Small.jpg";
 import Fade from "react-reveal/Fade";
 import ReactDelayRender from "react-delay-render";
+import { Card } from "react-bootstrap";
 
 function activeAbout() {
   $("#homeButton").removeClass("active");
@@ -47,14 +48,114 @@ function About() {
       {isMobile && (
         <>
           <div className="aboutMobile">
-            <h1>About</h1>
+            <h1 className="aboutTitle aboutTitleMobile">About Us</h1>
+            <Card className="aboutImage aboutImageMobile">
+              <Card.Body className="imageCard imageCardMobile">
+                <ProgressiveImage
+                  className="progressiveImage progressiveImageMobile"
+                  src={pilot1}
+                  placeholder={pilot1Small}
+                >
+                  {src => (
+                    <div className="imageContainer imageContainerMobile">
+                      <img
+                        className="image imageMobile imagePilotMobile"
+                        src={src}
+                        alt="image1"
+                      />
+                      <div className="pilotDescMobile">
+                        <h2 className="pilotDescMobileName">Lorem ipsum</h2>
+                        <p className="pilotDescMobileText">
+                          dolor sit amet, consectetur adipiscing
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </ProgressiveImage>
+              </Card.Body>
+            </Card>
+            <Card className="aboutImage aboutImageMobile">
+              <Card.Body className="imageCard imageCardMobile">
+                <ProgressiveImage
+                  className="progressiveImage progressiveImageMobile"
+                  src={pilot2}
+                  placeholder={pilot2Small}
+                >
+                  {src => (
+                    <div className="imageContainer imageContainerMobile">
+                      <img
+                        className="image imageMobile imagePilotMobile"
+                        src={src}
+                        alt="image2"
+                      />
+                      <div className="pilotDescMobile">
+                        <h2 className="pilotDescMobileName">Lorem ipsum</h2>
+                        <p className="pilotDescMobileText">
+                          dolor sit amet, consectetur adipiscing
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </ProgressiveImage>
+              </Card.Body>
+            </Card>
+            <Card className="aboutImage aboutImageMobile">
+              <Card.Body className="imageCard imageCardMobile">
+                <ProgressiveImage
+                  className="progressiveImage progressiveImageMobile"
+                  src={pilot3}
+                  placeholder={pilot3Small}
+                >
+                  {src => (
+                    <div className="imageContainer imageContainerMobile">
+                      <img
+                        className="image imageMobile imagePilotMobile"
+                        src={src}
+                        alt="image3"
+                      />
+                      <div className="pilotDescMobile">
+                        <h2 className="pilotDescMobileName">Lorem ipsum</h2>
+                        <p className="pilotDescMobileText">
+                          dolor sit amet, consectetur adipiscing
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </ProgressiveImage>
+              </Card.Body>
+            </Card>
+            <Card className="aboutImage aboutImageMobile">
+              <Card.Body className="imageCard imageCardMobile">
+                <ProgressiveImage
+                  className="progressiveImage progressiveImageMobile"
+                  src={pilot4}
+                  placeholder={pilot4Small}
+                >
+                  {src => (
+                    <div className="imageContainer imageContainerMobile">
+                      <img
+                        className="image imageMobile imagePilotMobile"
+                        src={src}
+                        alt="image4"
+                      />
+                      <div className="pilotDescMobile">
+                        <h2 className="pilotDescMobileName">Lorem ipsum</h2>
+                        <p className="pilotDescMobileText">
+                          dolor sit amet, consectetur adipiscing
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </ProgressiveImage>
+              </Card.Body>
+            </Card>
           </div>
         </>
       )}
       {isDesktop && (
         <>
           <div className="aboutDesktop">
-            <Fade top>
+            <Fade bottom>
               <h1 className="aboutTitle aboutTitleDesktop">About Us</h1>
             </Fade>
             <Fade bottom cascade>

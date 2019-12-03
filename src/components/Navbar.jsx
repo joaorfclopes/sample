@@ -38,7 +38,7 @@ function scrollHome() {
 function scrollAbout() {
   $("html, body").animate(
     {
-      scrollTop: $(".about").offset().top - 100
+      scrollTop: $(".about").offset().top - 80
     },
     800
   );
@@ -49,7 +49,7 @@ function scrollAbout() {
 function scrollContacts() {
   $("html, body").animate(
     {
-      scrollTop: $(".contacts").offset().top - 100
+      scrollTop: $(".contacts").offset().top - 80
     },
     800
   );

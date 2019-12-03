@@ -216,7 +216,36 @@ button.active.focus {
 }
 /*ABOUT*/
 .aboutMobile {
-  padding-top: 30vw;
+  padding-top: 20vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.aboutTitleMobile {
+  margin-bottom: 5vw;
+  word-spacing: 0.5vw;
+  font-size: 8vw;
+}
+.aboutImage {
+  border: none;
+  background: black;
+  border-radius: 0;
+}
+.imagePilotMobile {
+  opacity: 0.5;
+}
+.pilotDescMobile {
+  position: absolute;
+  bottom: 5vw;
+  left: 5vw;
+  text-align: left;
+}
+.pilotDescMobileName {
+  font-size: 8vw;
+  margin: 0;
+}
+.pilotDescMobileText {
+  font-size: 4vw;
+  margin: 0;
 }
 /*CONTACTS*/
 .contactsMobile {
