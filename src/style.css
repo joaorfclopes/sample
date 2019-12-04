@@ -186,16 +186,25 @@ button.active.focus {
 }
 /*HOME*/
 .homeMobile {
-  padding-top: 25vw;
+  padding-top: 30vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 .homeImageTitle {
+  position: absolute;
+  top: 5vw;
+  left: 5vw;
+  font-size: 8vw;
   text-align: left;
-  font-size: 5vw;
 }
 .homeImageMobile {
-  margin-left: 10vw;
-  margin-right: 10vw;
-  margin-top: 15vw;
+  border: none;
+  background: black;
+  border-radius: 0;
+  margin-top: 5vw;
+}
+.imageMobileHome {
+  opacity: 0.5;
 }
 .modal-content {
   -webkit-border-radius: 0px !important;
@@ -217,18 +226,19 @@ button.active.focus {
 /*ABOUT*/
 .aboutMobile {
   padding-top: 20vw;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 .aboutTitleMobile {
   margin-bottom: 5vw;
   word-spacing: 0.5vw;
-  font-size: 8vw;
+  font-size: 10vw;
 }
-.aboutImage {
+.aboutImageMobile {
   border: none;
   background: black;
   border-radius: 0;
+  margin-top: 5vw;
 }
 .imagePilotMobile {
   opacity: 0.5;
@@ -244,7 +254,7 @@ button.active.focus {
   margin: 0;
 }
 .pilotDescMobileText {
-  font-size: 4vw;
+  font-size: 5vw;
   margin: 0;
 }
 /*CONTACTS*/

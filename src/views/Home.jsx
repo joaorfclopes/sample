@@ -55,7 +55,6 @@ function Home() {
               <HomeModal show={modalShow} onHide={() => setModalShow(false)} />
             </div>
             <Card className="homeImage homeImageMobile">
-              <Card.Title className="homeImageTitle">Lorem ipsum</Card.Title>
               <Card.Body className="imageCard imageCardMobile">
                 <ProgressiveImage
                   className="progressiveImage progressiveImageMobile"
@@ -66,17 +65,17 @@ function Home() {
                     <div className="imageContainer imageContainerMobile">
                       <img
                         onClick={() => setModalShow(true)}
-                        className="image imageMobile"
+                        className="image imageMobile imageMobileHome"
                         src={src}
                         alt="image1"
                       />
+                      <h1 className="homeImageTitle">Lorem ipsum</h1>
                     </div>
                   )}
                 </ProgressiveImage>
               </Card.Body>
             </Card>
             <Card className="homeImage homeImageMobile">
-              <Card.Title className="homeImageTitle">Lorem ipsum</Card.Title>
               <Card.Body className="imageCard imageCardMobile">
                 <ProgressiveImage
                   className="progressiveImage progressiveImageMobile"
@@ -87,17 +86,17 @@ function Home() {
                     <div className="imageContainer imageContainerMobile">
                       <img
                         onClick={() => setModalShow(true)}
-                        className="image imageMobile"
+                        className="image imageMobile imageMobileHome"
                         src={src}
                         alt="image2"
                       />
+                      <h1 className="homeImageTitle">Lorem ipsum</h1>
                     </div>
                   )}
                 </ProgressiveImage>
               </Card.Body>
             </Card>
             <Card className="homeImage homeImageMobile">
-              <Card.Title className="homeImageTitle">Lorem ipsum</Card.Title>
               <Card.Body className="imageCard imageCardMobile">
                 <ProgressiveImage
                   className="progressiveImage progressiveImageMobile"
@@ -108,17 +107,17 @@ function Home() {
                     <div className="imageContainer imageContainerMobile">
                       <img
                         onClick={() => setModalShow(true)}
-                        className="image imageMobile"
+                        className="image imageMobile imageMobileHome"
                         src={src}
                         alt="image3"
                       />
+                      <h1 className="homeImageTitle">Lorem ipsum</h1>
                     </div>
                   )}
                 </ProgressiveImage>
               </Card.Body>
             </Card>
             <Card className="homeImage homeImageMobile">
-              <Card.Title className="homeImageTitle">Lorem ipsum</Card.Title>
               <Card.Body className="imageCard imageCardMobile">
                 <ProgressiveImage
                   className="progressiveImage progressiveImageMobile"
@@ -129,10 +128,11 @@ function Home() {
                     <div className="imageContainer imageContainerMobile">
                       <img
                         onClick={() => setModalShow(true)}
-                        className="image imageMobile"
+                        className="image imageMobile imageMobileHome"
                         src={src}
                         alt="image4"
                       />
+                      <h1 className="homeImageTitle">Lorem ipsum</h1>
                     </div>
                   )}
                 </ProgressiveImage>
