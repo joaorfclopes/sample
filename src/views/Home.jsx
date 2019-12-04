@@ -51,6 +51,7 @@ function Home() {
       {isMobile && (
         <>
           <div className="homeMobile">
+            <h1 className="homeTitle homeMobileTitle">Cars</h1>
             <div className="homeModal">
               <HomeModal show={modalShow} onHide={() => setModalShow(false)} />
             </div>
@@ -144,6 +145,9 @@ function Home() {
       {isDesktop && (
         <>
           <div className="homeDesktop">
+            <Fade top>
+              <h1 className="homeTitle homeDesktopTitle">Cars</h1>
+            </Fade>
             <div className="imageContainerDesktop">
               <div className="homeLeftImage">
                 <Fade left>
