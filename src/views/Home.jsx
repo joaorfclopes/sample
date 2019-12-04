@@ -11,7 +11,7 @@ import image3 from "../assets/images/home/image3.jpg";
 import image4Small from "../assets/images/home/image4Small.jpg";
 import image4 from "../assets/images/home/image4.jpg";
 import HomeModal from "../components/HomeModal";
-import Fade from "react-reveal/Fade";
+import Slide from "react-reveal/Slide";
 import $ from "jquery";
 import ReactDelayRender from "react-delay-render";
 
@@ -146,7 +146,7 @@ function Home() {
           <div className="homeDesktop">
             <div className="imageContainerDesktop">
               <div className="homeLeftImage">
-                <Fade left>
+                <Slide left>
                   <ProgressiveImage
                     className="progressiveImage progressiveImageMobile"
                     src={image1}
@@ -162,10 +162,10 @@ function Home() {
                       </div>
                     )}
                   </ProgressiveImage>
-                </Fade>
+                </Slide>
               </div>
               <div className="homeRightDesc">
-                <Fade right>
+                <Slide right>
                   <div className="homeText">
                     <h1>Lorem ipsum</h1>
                     <h3>
@@ -175,12 +175,12 @@ function Home() {
                       eros.
                     </h3>
                   </div>
-                </Fade>
+                </Slide>
               </div>
             </div>
             <div className="imageContainerDesktop">
               <div className="homeLeftDesc">
-                <Fade left>
+                <Slide left>
                   <div className="homeText">
                     <h1>Lorem ipsum</h1>
                     <h3>
@@ -190,10 +190,10 @@ function Home() {
                       eros.
                     </h3>
                   </div>
-                </Fade>
+                </Slide>
               </div>
               <div className="homeRightImage">
-                <Fade right>
+                <Slide right>
                   <ProgressiveImage
                     className="progressiveImage progressiveImageMobile"
                     src={image2}
@@ -209,12 +209,12 @@ function Home() {
                       </div>
                     )}
                   </ProgressiveImage>
-                </Fade>
+                </Slide>
               </div>
             </div>
             <div className="imageContainerDesktop">
               <div className="homeLeftImage">
-                <Fade left>
+                <Slide left>
                   <ProgressiveImage
                     className="progressiveImage progressiveImageMobile"
                     src={image3}
@@ -230,10 +230,10 @@ function Home() {
                       </div>
                     )}
                   </ProgressiveImage>
-                </Fade>
+                </Slide>
               </div>
               <div className="homeRightDesc">
-                <Fade right>
+                <Slide right>
                   <div className="homeText">
                     <h1>Lorem ipsum</h1>
                     <h3>
@@ -243,12 +243,12 @@ function Home() {
                       eros.
                     </h3>
                   </div>
-                </Fade>
+                </Slide>
               </div>
             </div>
             <div className="imageContainerDesktop">
               <div className="homeLeftDesc">
-                <Fade left>
+                <Slide left>
                   <div className="homeText">
                     <h1>Lorem ipsum</h1>
                     <h3>
@@ -258,10 +258,10 @@ function Home() {
                       eros.
                     </h3>
                   </div>
-                </Fade>
+                </Slide>
               </div>
               <div className="homeRightImage">
-                <Fade right>
+                <Slide right>
                   <ProgressiveImage
                     className="progressiveImage progressiveImageMobile"
                     src={image4}
@@ -277,7 +277,7 @@ function Home() {
                       </div>
                     )}
                   </ProgressiveImage>
-                </Fade>
+                </Slide>
               </div>
             </div>
           </div>

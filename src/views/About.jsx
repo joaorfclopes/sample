@@ -10,7 +10,7 @@ import pilot3 from "../assets/images/about/pilot3.jpg";
 import pilot3Small from "../assets/images/about/pilot3Small.jpg";
 import pilot4 from "../assets/images/about/pilot4.jpg";
 import pilot4Small from "../assets/images/about/pilot4Small.jpg";
-import Fade from "react-reveal/Fade";
+import Slide from "react-reveal/Slide";
 import ReactDelayRender from "react-delay-render";
 import { Card } from "react-bootstrap";
 
@@ -155,10 +155,10 @@ function About() {
       {isDesktop && (
         <>
           <div className="aboutDesktop">
-            <Fade bottom>
+            <Slide bottom>
               <h1 className="aboutTitle aboutTitleDesktop">About Us</h1>
-            </Fade>
-            <Fade bottom cascade>
+            </Slide>
+            <Slide bottom cascade>
               <div className="pilotsContainer pilotsContainerDesktop">
                 <div className="pilot pilotDesktop pilot1">
                   <ProgressiveImage
@@ -253,7 +253,7 @@ function About() {
                   </ProgressiveImage>
                 </div>
               </div>
-            </Fade>
+            </Slide>
           </div>
         </>
       )}
