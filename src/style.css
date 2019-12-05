@@ -417,7 +417,7 @@ button.active.focus {
 }
 /*CONTACTS*/
 .contactsDesktop {
-  padding-top: 5vw;
+  margin-top: 5vw;
 }
 .aboutTitleDesktop {
   word-spacing: 0.5vw;

@@ -47,16 +47,29 @@ function scrollAbout() {
   } catch (error) {}
 }
 function scrollContacts() {
-  $("html, body").animate(
-    {
-      scrollTop: $(".contacts").offset().top - 80
-    },
-    800
-  );
+  if (window.innerWidth <= 700) {
+    $("html, body").animate(
+      {
+        scrollTop: $(".contacts").offset().top - 80
+      },
+      800
+    );
 
-  try {
-    closeNav();
-  } catch (error) {}
+    try {
+      closeNav();
+    } catch (error) {}
+  } else {
+    $("html, body").animate(
+      {
+        scrollTop: $(".contacts").offset().top + 200
+      },
+      800
+    );
+
+    try {
+      closeNav();
+    } catch (error) {}
+  }
 }
 
 export default function Navbar() {
@@ -73,7 +86,7 @@ export default function Navbar() {
         <>
           <div className="nav navbar navMobile">
             <div className="left leftMobile">
-              <span onClick={scrollHome} >
+              <span onClick={scrollHome}>
                 <img className="logo logoMobile" src={logo} alt="logo" />
               </span>
             </div>
