@@ -1,6 +1,5 @@
 import React from "react";
 import { Alert } from "react-bootstrap";
-import $ from "jquery";
 
 export default function AlertBrowser(props) {
   const [show, setShow] = React.useState(true);
