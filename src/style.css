@@ -78,6 +78,20 @@ button.active.focus {
   outline: none !important;
 }
 /*ALERT*/
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+.fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
 .alertBrowser {
   text-align: center;
   position: fixed;
