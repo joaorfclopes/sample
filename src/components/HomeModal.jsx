@@ -1,7 +1,7 @@
 import React from "react";
 import { Modal } from "react-bootstrap";
 
-export default function Modal1(props) {
+export default function HomeModal(props) {
   return (
     <Modal
       className="modal"

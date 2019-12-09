@@ -77,6 +77,21 @@ button:active.focus,
 button.active.focus {
   outline: none !important;
 }
+/*ALERT*/
+.alertBrowser {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 0;
+  z-index: 999;
+  width: 100%;
+  border-radius: 0;
+  opacity: 0.8;
+}
+.alertText {
+  margin: 0;
+  font-family: "Staatliches", cursive;
+}
 /*NAV*/
 .nav {
   position: fixed;
