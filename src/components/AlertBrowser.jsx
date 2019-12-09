@@ -16,7 +16,7 @@ export default function AlertBrowser(props) {
       dismissible
     >
       <p className="alertText">
-        For a better desktop experience it's recommended to use <u>Chrome</u> or{" "}
+        For a better experience it's recommended to use <u>Chrome</u> or{" "}
         <u>Firefox</u>.
       </p>
     </Alert>
