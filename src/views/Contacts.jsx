@@ -3,6 +3,11 @@ import $ from "jquery";
 import { useMediaQuery } from "react-responsive";
 import ReactDelayRender from "react-delay-render";
 import Slide from "react-reveal/Slide";
+import Fade from "react-reveal/Fade";
+import instagram from "../assets/svg/instagram-logo.svg";
+import facebook from "../assets/svg/facebook-logo.svg";
+import github from "../assets/svg/github-logo.svg";
+import linkedin from "../assets/svg/linkedin-logo.svg";
 
 function activeContacts() {
   $("#homeButton").removeClass("active");
@@ -66,6 +71,85 @@ function Contacts() {
                 </svg>
                 <div className="contactsContainerDesktop">
                   <h1 className="aboutTitleDesktop">Contact Us</h1>
+                  <div className="contactsContent contactsContentDesktop">
+                    <div className="contactsLeft contactsLeftDesktop">
+                      <Fade delay={200}>
+                        <div className="contactsLeftMap contactsLeftMapDesktop">
+                          <iframe
+                            title="map"
+                            className="mapDesktop"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48291.28660239374!2d-8.68467773392349!3d40.845413705177805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd23858e8509d46f%3A0xbe5329c1c64c57f6!2sOvar!5e0!3m2!1sen!2spt!4v1575923263870!5m2!1sen!2spt"
+                            frameBorder="0"
+                          ></iframe>
+                        </div>
+                      </Fade>
+                      <Fade delay={400}>
+                        <div className="contactsLeftTextDesktop">
+                          <h1 className="contactsLeftTitleDesktop">
+                            Lorem ipsum
+                          </h1>
+                          <p className="contactsLeftParagraphDesktop">
+                            dolor sit amet, consectetur adipiscing elit
+                          </p>
+                          <p className="contactsLeftParagraphDesktop">
+                            12345653645
+                          </p>
+                          <p className="contactsLeftParagraphDesktop">
+                            Mauris imperdiet ex id faucibus
+                          </p>
+                        </div>
+                      </Fade>
+                    </div>
+                    <div className="contactsRight contactsRightDesktop"></div>
+                  </div>
+                  <div className="contactsFooter contactsFooterDesktop">
+                    <div className="contactsBottom contactsBottomDesktop">
+                      <a
+                        href="https://www.instagram.com/eutanasiamata/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <img
+                          className="contactsLink"
+                          src={instagram}
+                          alt="instagram logo"
+                        />
+                      </a>
+                      <a
+                        href="https://www.facebook.com/profile.php?id=100006059823061"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <img
+                          className="contactsLink"
+                          src={facebook}
+                          alt="facebook logo"
+                        />
+                      </a>
+                      <a
+                        href="https://github.com/joaorfclopes"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <img
+                          className="contactsLink"
+                          src={github}
+                          alt="github logo"
+                        />
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/in/joaorfclopes/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <img
+                          className="contactsLink"
+                          src={linkedin}
+                          alt="linkedin logo"
+                        />
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

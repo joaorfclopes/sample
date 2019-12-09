@@ -443,3 +443,60 @@ button.active.focus {
   background: #111;
   margin-top: -5px;
 }
+.contactsContentDesktop {
+  height: 70%;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.contactsLeftDesktop {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+.contactsLeftTextDesktop {
+  margin-top: 1vw;
+  text-align: left;
+}
+.contactsLeftMapDesktop {
+  text-align: left;
+  width: 100%;
+}
+.mapDesktop {
+  width: 80%;
+  height: 25vw;
+}
+.contactsLeftTitleDesktop {
+  margin: 0;
+  font-size: 2.2vw;
+}
+.contactsLeftParagraphDesktop {
+  margin: 0;
+  font-size: 1.2vw;
+}
+.contactsRightDesktop {
+  float: right;
+  height: 100%;
+  width: 50%;
+}
+.contactsFooterDesktop {
+  height: 30%;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.contactsBottomDesktop {
+  height: 50%;
+  width: 100%;
+  text-align: center;
+}
+.contactsLink {
+  margin-top: 3vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  width: 3vw;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.contactsLink:hover {
+  transition: 0.4s;
+  opacity: 0.5;
+}
