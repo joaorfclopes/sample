@@ -3,22 +3,23 @@ import { Alert } from "react-bootstrap";
 import $ from "jquery";
 
 export default function AlertBrowser(props) {
-  function closeAlert() {
-    $(".alertBrowser").addClass("fadeOut")
-  }
+  const [show, setShow] = React.useState(true);
 
-  return (
-    <Alert
-      className="alertBrowser"
-      id="alert"
-      variant="light"
-      onClose={() => closeAlert()}
-      dismissible
-    >
-      <p className="alertText">
-        For a better experience it's recommended to use <u>Chrome</u> or{" "}
-        <u>Firefox</u>.
-      </p>
-    </Alert>
-  );
+  if (show) {
+    return (
+      <Alert
+        className="alertBrowser"
+        id="alert"
+        variant="light"
+        onClose={() => setShow(false)}
+        dismissible
+      >
+        <p className="alertText">
+          For a better experience it's recommended to use <u>Chrome</u> or{" "}
+          <u>Firefox</u>.
+        </p>
+      </Alert>
+    );
+  }
+  return <div></div>;
 }
