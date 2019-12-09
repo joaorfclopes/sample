@@ -287,6 +287,7 @@ button.active.focus {
 .contactsContainerMobile {
   height: 180vw;
   background: #111;
+  margin-top: -5px;
 }
 /*----------------DESKTOP----------------*/
 
@@ -454,4 +455,5 @@ button.active.focus {
 .contactsContainerDesktop {
   height: 50vw;
   background: #111;
+  margin-top: -5px;
 }
