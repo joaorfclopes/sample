@@ -8,6 +8,8 @@ import instagram from "../assets/svg/instagram-logo.svg";
 import facebook from "../assets/svg/facebook-logo.svg";
 import github from "../assets/svg/github-logo.svg";
 import linkedin from "../assets/svg/linkedin-logo.svg";
+import { Form, Button } from "react-bootstrap";
+import emailjs from "emailjs-com";
 
 function activeContacts() {
   $("#homeButton").removeClass("active");
@@ -37,6 +39,29 @@ function Contacts() {
   const isDesktop = useMediaQuery({
     query: "(min-device-width: 700px)"
   });
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    $(".buttonText").text("Sending...");
+
+    emailjs
+      .sendForm(
+        "gmail",
+        "tile_classics",
+        e.target,
+        "user_mgRn9Lvjkx5ZXEdHVNM6v"
+      )
+      .then(
+        result => {
+          $(".buttonText").text("Send");
+          $(".sendButton").attr("disabled", true);
+        },
+        error => {
+          $(".buttonText").text("Error. Try again.");
+        }
+      );
+  }
 
   return (
     <div className="contacts view">
@@ -74,7 +99,32 @@ function Contacts() {
                       </p>
                     </div>
                   </div>
-                  <div className="contactsRight contactsRightMobile"></div>
+                  <div className="contactsRight contactsRightMobile">
+                    <h1 className="contactsRightTitleMobile">Send an email:</h1>
+                    <div className="mail mailMobile">
+                      <form className="mailForm" onSubmit={sendEmail}>
+                        <div className="mailTextAreaContainerMobile">
+                          <Form.Control
+                            className="mailTextAreaMobile"
+                            as="textarea"
+                            placeholder="Write message here..."
+                            name="message"
+                          ></Form.Control>
+                          <div className="mailButtonContainerMobile">
+                            <Button
+                              type="submit"
+                              className="sendButton sendButtonMobile"
+                              variant="dark"
+                            >
+                              <div className="buttonText buttonTextMobile">
+                                Send
+                              </div>
+                            </Button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>{" "}
                 </div>
                 <div className="contactsFooter contactsFooterMobile">
                   <div className="contactsBottom contactsBottomMobile">
@@ -145,7 +195,7 @@ function Contacts() {
                   <h1 className="aboutTitleDesktop">Contact Us</h1>
                   <div className="contactsContent contactsContentDesktop">
                     <div className="contactsLeft contactsLeftDesktop">
-                      <Fade delay={200}>
+                      <Fade delay={100}>
                         <div className="contactsLeftMap contactsLeftMapDesktop">
                           <iframe
                             title="map"
@@ -155,7 +205,7 @@ function Contacts() {
                           ></iframe>
                         </div>
                       </Fade>
-                      <Fade delay={300}>
+                      <Fade delay={200}>
                         <div className="contactsLeftTextDesktop">
                           <h1 className="contactsLeftTitleDesktop">
                             Lorem ipsum
@@ -172,7 +222,38 @@ function Contacts() {
                         </div>
                       </Fade>
                     </div>
-                    <div className="contactsRight contactsRightDesktop"></div>
+                    <div className="contactsRight contactsRightDesktop">
+                      <Fade delay={100}>
+                        <h1 className="contactsRightTitleDesktop">
+                          Send an email:
+                        </h1>
+                      </Fade>
+                      <Fade delay={200}>
+                        <div className="mail mailDesktop">
+                          <form className="mailForm" onSubmit={sendEmail}>
+                            <div className="mailTextAreaContainerDesktop">
+                              <Form.Control
+                                className="mailTextAreaDesktop"
+                                as="textarea"
+                                placeholder="Write message here..."
+                                name="message"
+                              ></Form.Control>
+                              <div className="mailButtonContainerDesktop">
+                                <Button
+                                  type="submit"
+                                  className="sendButton sendButtonDesktop"
+                                  variant="dark"
+                                >
+                                  <div className="buttonText buttonTextDesktop">
+                                    Send
+                                  </div>
+                                </Button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </Fade>
+                    </div>
                   </div>
                   <div className="contactsFooter contactsFooterDesktop">
                     <div className="contactsBottom contactsBottomDesktop">

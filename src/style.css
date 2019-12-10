@@ -77,6 +77,23 @@ button:active.focus,
 button.active.focus {
   outline: none !important;
 }
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+  border-color: #111 !important;
+}
 /*ALERT*/
 .alertBrowser {
   text-align: center;
@@ -271,7 +288,7 @@ button.active.focus {
   font-size: 10vw;
 }
 .contactsContainerMobile {
-  height: 200vw;
+  height: 240vw;
   background: #111;
   margin-top: -5px;
 }
@@ -296,10 +313,44 @@ button.active.focus {
   font-size: 5vw;
   margin: 0;
 }
+.contactsRightMobile {
+  text-align: left;
+  margin-top: 10vw;
+}
+.contactsRightTitleMobile {
+  font-size: 8vw;
+  margin: 0;
+}
+.mailMobile {
+  margin-top: 3vw;
+  height: 70vw;
+  width: 100%;
+  background: white;
+}
+.mailTextAreaContainerMobile {
+  padding: 5vw;
+  height: 100%;
+}
+.mailTextAreaMobile {
+  width: 100%;
+  border-radius: 0;
+  border-color: #111;
+  height: 75% !important;
+  resize: none;
+}
+.sendButtonMobile {
+  margin-top: 5vw;
+  width: 100%;
+  border-radius: 0;
+  height: 10vw;
+}
+.buttonTextMobile {
+  font-size: 5vw;
+}
 .contactsLinkMobile {
   margin-left: 5vw;
   margin-right: 5vw;
-  margin-top: 10vw;
+  margin-top: 15vw;
   width: 10vw;
   cursor: pointer;
   transition: 0.4s;
@@ -507,6 +558,40 @@ button.active.focus {
   float: right;
   height: 100%;
   width: 50%;
+  text-align: left;
+}
+.contactsRightTitleDesktop {
+  margin: 0;
+  font-size: 2.2vw;
+}
+.mailDesktop {
+  margin-top: 3vw;
+  height: 30vw;
+  width: 100%;
+  background: white;
+}
+.mailForm {
+  height: 100%;
+}
+.mailTextAreaContainerDesktop {
+  padding: 2vw;
+  height: 100%;
+}
+.mailTextAreaDesktop {
+  width: 100%;
+  border-radius: 0;
+  border-color: #111;
+  height: 80% !important;
+  resize: none;
+}
+.sendButtonDesktop {
+  margin-top: 2vw;
+  width: 10vw;
+  border-radius: 0;
+  height: 3vw;
+}
+.buttonTextDesktop {
+  font-size: 1.2vw;
 }
 .contactsFooterDesktop {
   height: 30vw;
