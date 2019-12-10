@@ -271,9 +271,38 @@ button.active.focus {
   font-size: 10vw;
 }
 .contactsContainerMobile {
-  height: 180vw;
+  height: 200vw;
   background: #111;
   margin-top: -5px;
+}
+.contactsContentMobile {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+.mapMobile {
+  margin-top: 10vw;
+  width: 100%;
+  height: 60vw;
+}
+.contactsLeftTextMobile {
+  text-align: left;
+  margin-top: 5vw;
+}
+.contactsLeftTitleMobile {
+  font-size: 8vw;
+  margin: 0;
+}
+.contactsLeftParagraphMobile {
+  font-size: 5vw;
+  margin: 0;
+}
+.contactsLinkMobile {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 10vw;
+  width: 10vw;
+  cursor: pointer;
+  transition: 0.4s;
 }
 /*----------------DESKTOP----------------*/
 
@@ -439,14 +468,15 @@ button.active.focus {
   font-size: 2.5vw;
 }
 .contactsContainerDesktop {
-  height: 50vw;
+  height: 60vw;
   background: #111;
   margin-top: -5px;
 }
 .contactsContentDesktop {
-  height: 70%;
+  height: 45vw;
   margin-left: 10vw;
   margin-right: 10vw;
+  padding-top: 2vw;
 }
 .contactsLeftDesktop {
   float: left;
@@ -454,7 +484,7 @@ button.active.focus {
   width: 50%;
 }
 .contactsLeftTextDesktop {
-  margin-top: 1vw;
+  margin-top: 3vw;
   text-align: left;
 }
 .contactsLeftMapDesktop {
@@ -479,24 +509,23 @@ button.active.focus {
   width: 50%;
 }
 .contactsFooterDesktop {
-  height: 30%;
+  height: 30vw;
   margin-left: 10vw;
   margin-right: 10vw;
 }
 .contactsBottomDesktop {
-  height: 50%;
+  height: 50vw;
   width: 100%;
   text-align: center;
 }
-.contactsLink {
-  margin-top: 3vw;
+.contactsLinkDesktop {
   margin-left: 3vw;
   margin-right: 3vw;
   width: 3vw;
   cursor: pointer;
   transition: 0.4s;
 }
-.contactsLink:hover {
+.contactsLinkDesktop:hover {
   transition: 0.4s;
   opacity: 0.5;
 }

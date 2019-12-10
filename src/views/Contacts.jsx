@@ -52,7 +52,79 @@ function Contacts() {
                   d="M0,64L48,80C96,96,192,128,288,149.3C384,171,480,181,576,165.3C672,149,768,107,864,80C960,53,1056,43,1152,42.7C1248,43,1344,53,1392,58.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
                 ></path>
               </svg>
-              <div className="contactsContainerMobile"></div>
+              <div className="contactsContainerMobile">
+                <div className="contactsContent contactsContentMobile">
+                  <div className="contactsLeft contactsLeftMobile">
+                    <div className="contactsLeftMap contactsLeftMapMobile">
+                      <iframe
+                        title="map"
+                        className="mapMobile"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48291.28660239374!2d-8.68467773392349!3d40.845413705177805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd23858e8509d46f%3A0xbe5329c1c64c57f6!2sOvar!5e0!3m2!1sen!2spt!4v1575923263870!5m2!1sen!2spt"
+                        frameBorder="0"
+                      ></iframe>
+                    </div>
+                    <div className="contactsLeftTextMobile">
+                      <h1 className="contactsLeftTitleMobile">Lorem ipsum</h1>
+                      <p className="contactsLeftParagraphMobile">
+                        dolor sit amet, consectetur adipiscing elit
+                      </p>
+                      <p className="contactsLeftParagraphMobile">12345653645</p>
+                      <p className="contactsLeftParagraphMobile">
+                        Mauris imperdiet ex id faucibus
+                      </p>
+                    </div>
+                  </div>
+                  <div className="contactsRight contactsRightMobile"></div>
+                </div>
+                <div className="contactsFooter contactsFooterMobile">
+                  <div className="contactsBottom contactsBottomMobile">
+                    <a
+                      href="https://www.instagram.com/eutanasiamata/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <img
+                        className="contactsLinkMobile"
+                        src={instagram}
+                        alt="instagram logo"
+                      />
+                    </a>
+                    <a
+                      href="https://www.facebook.com/profile.php?id=100006059823061"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <img
+                        className="contactsLinkMobile"
+                        src={facebook}
+                        alt="facebook logo"
+                      />
+                    </a>
+                    <a
+                      href="https://github.com/joaorfclopes"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <img
+                        className="contactsLinkMobile"
+                        src={github}
+                        alt="github logo"
+                      />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/joaorfclopes/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <img
+                        className="contactsLinkMobile"
+                        src={linkedin}
+                        alt="linkedin logo"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </>
@@ -110,7 +182,7 @@ function Contacts() {
                         target="_blank"
                       >
                         <img
-                          className="contactsLink"
+                          className="contactsLinkDesktop"
                           src={instagram}
                           alt="instagram logo"
                         />
@@ -121,7 +193,7 @@ function Contacts() {
                         target="_blank"
                       >
                         <img
-                          className="contactsLink"
+                          className="contactsLinkDesktop"
                           src={facebook}
                           alt="facebook logo"
                         />
@@ -132,7 +204,7 @@ function Contacts() {
                         target="_blank"
                       >
                         <img
-                          className="contactsLink"
+                          className="contactsLinkDesktop"
                           src={github}
                           alt="github logo"
                         />
@@ -143,7 +215,7 @@ function Contacts() {
                         target="_blank"
                       >
                         <img
-                          className="contactsLink"
+                          className="contactsLinkDesktop"
                           src={linkedin}
                           alt="linkedin logo"
                         />
