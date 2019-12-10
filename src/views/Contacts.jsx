@@ -155,7 +155,7 @@ function Contacts() {
                           ></iframe>
                         </div>
                       </Fade>
-                      <Fade delay={400}>
+                      <Fade delay={300}>
                         <div className="contactsLeftTextDesktop">
                           <h1 className="contactsLeftTitleDesktop">
                             Lorem ipsum
