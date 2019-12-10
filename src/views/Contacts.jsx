@@ -194,8 +194,8 @@ function Contacts() {
                 <div className="contactsContainerDesktop">
                   <h1 className="aboutTitleDesktop">Contact Us</h1>
                   <div className="contactsContent contactsContentDesktop">
-                    <div className="contactsLeft contactsLeftDesktop">
-                      <Fade delay={100}>
+                    <Fade delay={100}>
+                      <div className="contactsLeft contactsLeftDesktop">
                         <div className="contactsLeftMap contactsLeftMapDesktop">
                           <iframe
                             title="map"
@@ -204,8 +204,6 @@ function Contacts() {
                             frameBorder="0"
                           ></iframe>
                         </div>
-                      </Fade>
-                      <Fade delay={200}>
                         <div className="contactsLeftTextDesktop">
                           <h1 className="contactsLeftTitleDesktop">
                             Lorem ipsum
@@ -220,15 +218,13 @@ function Contacts() {
                             Mauris imperdiet ex id faucibus
                           </p>
                         </div>
-                      </Fade>
-                    </div>
-                    <div className="contactsRight contactsRightDesktop">
-                      <Fade delay={100}>
+                      </div>
+                    </Fade>
+                    <Fade delay={200}>
+                      <div className="contactsRight contactsRightDesktop">
                         <h1 className="contactsRightTitleDesktop">
                           Send an email:
                         </h1>
-                      </Fade>
-                      <Fade delay={200}>
                         <div className="mail mailDesktop">
                           <form className="mailForm" onSubmit={sendEmail}>
                             <div className="mailTextAreaContainerDesktop">
@@ -252,8 +248,8 @@ function Contacts() {
                             </div>
                           </form>
                         </div>
-                      </Fade>
-                    </div>
+                      </div>
+                    </Fade>
                   </div>
                   <div className="contactsFooter contactsFooterDesktop">
                     <div className="contactsBottom contactsBottomDesktop">
